@@ -5,7 +5,7 @@ service cloud.firestore {
     // Adresses Google autorisées à lire les résultats (page resultats.html).
     function isOrganizer() {
       return request.auth != null
-        && request.auth.token.email in ['ddigloria@emasphere.com'];
+        && request.auth.token.email in ['david.digloria77@gmail.com'];
     }
 
     function isCode(value) {
