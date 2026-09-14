@@ -175,6 +175,10 @@
     "x" : 36,
     "y" : 26
   },
+  "assets/joueurs/david-di-gloria-tshirt-happy" : {
+    "x" : 52,
+    "y" : 34
+  },
   "assets/joueurs/elodie" : {
     "x" : 46,
     "y" : 27
@@ -254,6 +258,10 @@
   "assets/joueurs/gab-de-pat-requins" : {
     "x" : 51,
     "y" : 40
+  },
+  "assets/joueurs/gab-de-pat-tshirt-happy" : {
+    "x" : 54,
+    "y" : 36
   },
   "assets/joueurs/img" : {
     "x" : 50,

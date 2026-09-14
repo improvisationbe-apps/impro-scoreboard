@@ -23,8 +23,8 @@
           <!-- Décors de l'équipe dans le fond de la carte, visibles derrière les photos détourées -->
           <app-team-layout class="card-layout card-layout-left" [team]="team()" side="left"/>
           <app-team-layout class="card-layout card-layout-right" [team]="team()" side="right"/>
-          @if (playerMetadata?.hasPhoto(teamMetadata())) {
-            <img [src]="playerMetadata.imgSrc(teamMetadata())" [alt]="playerValue.code"
+          @if (playerMetadata?.hasPhoto(teamMetadata(), player.key)) {
+            <img [src]="playerMetadata.imgSrc(teamMetadata(), player.key)" [alt]="playerValue.code"
                  class="player-photo"/>
           } @else {
             <!-- Pas de photo : la mascotte remplit la carte, cadrée comme sur l'écran de match -->

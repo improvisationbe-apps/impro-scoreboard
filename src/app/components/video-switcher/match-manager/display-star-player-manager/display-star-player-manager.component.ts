@@ -50,10 +50,10 @@ export class DisplayStarPlayerManagerComponent {
     return this.teamsByName()[team.name];
   }
 
-  playerImg(team: Team, code: string): string {
+  playerImg(team: Team, code: string, role?: string): string {
     const metadata = this.teamMetadata(team);
     const playerMetadata = this.playersByCode()[code];
-    return playerMetadata?.imgSrc(metadata) ?? metadata?.playerImgFallback;
+    return playerMetadata?.imgSrc(metadata, role) ?? metadata?.playerImgFallback;
   }
 
   hasVideo(code: string): boolean {

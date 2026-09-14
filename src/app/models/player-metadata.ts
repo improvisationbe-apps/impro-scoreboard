@@ -1,5 +1,9 @@
 import {PlayerMetadataDto} from "../dtos";
 import {TeamMetadata} from "./team-metadata";
+import {Role} from "@enums/role.enum";
+
+/** Suffixe de la photo "t-shirt improvisation.be" utilisée pour les coachs (ex. "gab-de-pat-tshirt-happy"). */
+export const COACH_IMG_SUFFIX = '-tshirt-happy';
 
 /** Manifeste des photos (assets/data/photos.json, généré par scripts/photos-manifest.js) : nom sans extension → chemin. */
 export type PhotosManifest = Record<string, string>;
@@ -42,27 +46,36 @@ export class PlayerMetadata {
   /**
    * Clé de la photo du joueur dans une équipe : chemin de base + suffixe d'équipe, sans extension
    * (ex. "assets/joueurs/polo-lions"). Sert aussi de clé dans face-positions.json.
+   * Un coach utilise sa photo "t-shirt" (suffixe -tshirt-happy) quand elle existe, sinon celle de l'équipe.
    */
-  imgKey(teamMetadata?: TeamMetadata): string | undefined {
-    return this._dto.img ? this._dto.img + (teamMetadata?.playerImgSuffix ?? '') : undefined;
+  imgKey(teamMetadata?: TeamMetadata, role?: string): string | undefined {
+    if (!this._dto.img) return undefined;
+    if (role === Role.COACH && this.photoSrcForKey(this._dto.img + COACH_IMG_SUFFIX)) {
+      return this._dto.img + COACH_IMG_SUFFIX;
+    }
+    return this._dto.img + (teamMetadata?.playerImgSuffix ?? '');
   }
 
   /**
    * Chemin de la photo du joueur dans une équipe, quelle que soit son extension (jpg, png, webp…),
    * résolu via le manifeste des photos. Sans photo, on retombe sur la photo générique de l'équipe.
    */
-  imgSrc(teamMetadata?: TeamMetadata): string | undefined {
-    return this.photoSrc(teamMetadata) || teamMetadata?.playerImgFallback;
+  imgSrc(teamMetadata?: TeamMetadata, role?: string): string | undefined {
+    return this.photoSrc(teamMetadata, role) || teamMetadata?.playerImgFallback;
   }
 
   /** Vrai si le joueur a sa propre photo dans cette équipe (sinon on affiche la mascotte ou la photo générique). */
-  hasPhoto(teamMetadata?: TeamMetadata): boolean {
-    return !!this.photoSrc(teamMetadata);
+  hasPhoto(teamMetadata?: TeamMetadata, role?: string): boolean {
+    return !!this.photoSrc(teamMetadata, role);
   }
 
   /** Chemin de la photo du joueur dans l'équipe d'après le manifeste, sans repli. */
-  private photoSrc(teamMetadata?: TeamMetadata): string | undefined {
-    const key = this.imgKey(teamMetadata);
+  private photoSrc(teamMetadata?: TeamMetadata, role?: string): string | undefined {
+    return this.photoSrcForKey(this.imgKey(teamMetadata, role));
+  }
+
+  /** Chemin d'une photo d'après sa clé (chemin sans extension) dans le manifeste. */
+  private photoSrcForKey(key?: string): string | undefined {
     const stem = key?.substring(key.lastIndexOf('/') + 1);
     return stem ? this._photos[stem] : undefined;
   }

@@ -69,7 +69,7 @@ export class StarPlayerPresentationComponent {
   playerImg: Signal<string | undefined> = computed(() => {
     const metadata = this.playerMetadata();
     const teamMetadata = this.teamMetadata();
-    return metadata?.imgSrc(teamMetadata) ?? teamMetadata?.playerImgFallback;
+    return metadata?.imgSrc(teamMetadata, this.starPlayer().role ?? undefined) ?? teamMetadata?.playerImgFallback;
   });
 
   /** Logo improvisation.be à la couleur de l'équipe du joueur (mono si aucun joueur). */

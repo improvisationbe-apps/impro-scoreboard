@@ -10,7 +10,7 @@
         <!-- Décors de l'équipe en fond de carte, comme sur l'écran de présentation -->
         <app-team-layout class="card-layout card-layout-left" [team]="team()" side="left"/>
         <app-team-layout class="card-layout card-layout-right" [team]="team()" side="right"/>
-        @let playerImg = playerMetadata?.imgSrc(teamMetadata()) ?? teamMetadata()?.playerImgFallback;
+        @let playerImg = playerMetadata?.imgSrc(teamMetadata(), player.key) ?? teamMetadata()?.playerImgFallback;
         <img [src]="playerImg" [alt]="playerValue.code" class="player-photo" />
         <div *ngIf="playerValue.number" class="player-number">#{{ playerValue.number }}</div>
         <div class="overlay">
