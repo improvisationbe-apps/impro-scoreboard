@@ -8,9 +8,6 @@
     <app-team-layout class="layout layout-right" [team]="gameData().teamB" side="right"/>
 
     <div class="content">
-      <div class="title">Votez pour<br>les étoiles</div>
-      <div class="subtitle">Scannez le QR code et classez vos trois joueurs préférés</div>
-
       <div class="qr">
         @if (qrDataUrl()) {
           <img [src]="qrDataUrl()" alt="QR code de vote"/>

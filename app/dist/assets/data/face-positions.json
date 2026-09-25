@@ -1,582 +1,502 @@
 {
-  "assets/joueurs/alain-aigles-Photoroom.jpg": {
-    "x": 42,
-    "y": 25
-  },
-  "assets/joueurs/alain-lions-Photoroom.jpg": {
-    "x": 43,
-    "y": 25
-  },
-  "assets/joueurs/alain-pythons-Photoroom.jpg": {
-    "x": 42,
-    "y": 24
-  },
-  "assets/joueurs/alain-requins-Photoroom.jpg": {
-    "x": 41,
-    "y": 24
-  },
-  "assets/joueurs/alex-christoffel-aigles-Photoroom.jpg": {
-    "x": 51,
-    "y": 25
-  },
-  "assets/joueurs/alex-christoffel-lions-Photoroom.jpg": {
-    "x": 52,
-    "y": 26
-  },
-  "assets/joueurs/alex-christoffel-pythons-Photoroom.jpg": {
-    "x": 52,
-    "y": 25
-  },
-  "assets/joueurs/alex-christoffel-requins-Photoroom.jpg": {
-    "x": 51,
-    "y": 25
-  },
-  "assets/joueurs/alex-colusi-aigles-Photoroom.jpg": {
-    "x": 42,
-    "y": 25
-  },
-  "assets/joueurs/alex-colusi-lions-Photoroom.jpg": {
-    "x": 41,
-    "y": 25
-  },
-  "assets/joueurs/alex-colusi-pythons-Photoroom.jpg": {
-    "x": 42,
-    "y": 25
-  },
-  "assets/joueurs/alex-colusi-requins-Photoroom.jpg": {
-    "x": 41,
-    "y": 25
-  },
-  "assets/joueurs/alex-pauwels-aigles-Photoroom.jpg": {
-    "x": 45,
-    "y": 25
-  },
-  "assets/joueurs/alex-pauwels-lions-Photoroom.jpg": {
-    "x": 45,
-    "y": 25
-  },
-  "assets/joueurs/alex-pauwels-pythons-Photoroom.jpg": {
-    "x": 44,
-    "y": 24
-  },
-  "assets/joueurs/alex-pauwels-requins-Photoroom.jpg": {
-    "x": 44,
-    "y": 24
-  },
-  "assets/joueurs/alexandra-ducoux-aigles-Photoroom.jpg": {
-    "x": 53,
-    "y": 29
-  },
-  "assets/joueurs/alexandra-ducoux-lions-Photoroom.jpg": {
-    "x": 53,
-    "y": 29
-  },
-  "assets/joueurs/alexandra-ducoux-pythons-Photoroom.jpg": {
-    "x": 53,
-    "y": 28
-  },
-  "assets/joueurs/alexandra-ducoux-requins-Photoroom.jpg": {
-    "x": 52,
-    "y": 28
-  },
-  "assets/joueurs/antoine-aigles-Photoroom.jpg": {
-    "x": 45,
-    "y": 26
-  },
-  "assets/joueurs/antoine-lions-Photoroom.jpg": {
-    "x": 43,
-    "y": 26
-  },
-  "assets/joueurs/antoine-pythons-Photoroom.jpg": {
-    "x": 44,
-    "y": 27
-  },
-  "assets/joueurs/antoine-requins-Photoroom.jpg": {
-    "x": 44,
-    "y": 26
-  },
-  "assets/joueurs/arnaud-aigles-Photoroom.jpg": {
-    "x": 39,
-    "y": 27
-  },
-  "assets/joueurs/arnaud-lions-Photoroom.jpg": {
-    "x": 37,
-    "y": 26
-  },
-  "assets/joueurs/arnaud-pythons-Photoroom.jpg": {
-    "x": 39,
-    "y": 26
-  },
-  "assets/joueurs/arnaud-requins-Photoroom.jpg": {
-    "x": 39,
-    "y": 26
-  },
-  "assets/joueurs/aurore-aigles-Photoroom.jpg": {
-    "x": 47,
-    "y": 25
-  },
-  "assets/joueurs/aurore-lions-Photoroom.jpg": {
-    "x": 47,
-    "y": 25
-  },
-  "assets/joueurs/aurore-pythons-Photoroom.jpg": {
-    "x": 47,
-    "y": 25
-  },
-  "assets/joueurs/aurore-requins-Photoroom.jpg": {
-    "x": 47,
-    "y": 24
-  },
-  "assets/joueurs/ben-aigles-Photoroom.jpg": {
-    "x": 44,
-    "y": 29
-  },
-  "assets/joueurs/ben-lions-Photoroom.jpg": {
-    "x": 44,
-    "y": 29
-  },
-  "assets/joueurs/ben-pythons-Photoroom.jpg": {
-    "x": 44,
-    "y": 29
-  },
-  "assets/joueurs/ben-requins-Photoroom.jpg": {
-    "x": 43,
-    "y": 28
-  },
-  "assets/joueurs/caroline-aigles-Photoroom.jpg": {
-    "x": 49,
-    "y": 25
-  },
-  "assets/joueurs/caroline-lions-Photoroom.jpg": {
-    "x": 49,
-    "y": 24
-  },
-  "assets/joueurs/caroline-pythons-Photoroom.jpg": {
-    "x": 49,
-    "y": 24
-  },
-  "assets/joueurs/caroline-requins-Photoroom.jpg": {
-    "x": 48,
-    "y": 24
-  },
-  "assets/joueurs/cath-aigles-Photoroom.jpg": {
-    "x": 46,
-    "y": 24
-  },
-  "assets/joueurs/cath-lions-Photoroom.jpg": {
-    "x": 46,
-    "y": 24
-  },
-  "assets/joueurs/cath-pythons-Photoroom.jpg": {
-    "x": 46,
-    "y": 24
-  },
-  "assets/joueurs/cath-requins-Photoroom.jpg": {
-    "x": 46,
-    "y": 24
-  },
-  "assets/joueurs/charlotte-otlet-aigles-Photoroom.jpg": {
-    "x": 50,
-    "y": 39
-  },
-  "assets/joueurs/charlotte-otlet-lions-Photoroom.jpg": {
-    "x": 50,
-    "y": 40
-  },
-  "assets/joueurs/charlotte-otlet-pythons-Photoroom.jpg": {
-    "x": 50,
-    "y": 38
-  },
-  "assets/joueurs/charlotte-otlet-requins-Photoroom.jpg": {
-    "x": 49,
-    "y": 39
-  },
-  "assets/joueurs/clem-aigle-Photoroom.jpg": {
-    "x": 50,
-    "y": 30
-  },
-  "assets/joueurs/clem-aigles-Photoroom.jpg": {
-    "x": 50,
-    "y": 30
-  },
-  "assets/joueurs/clem-lions-Photoroom.jpg": {
-    "x": 50,
-    "y": 29
-  },
-  "assets/joueurs/clem-pythons-Photoroom.jpg": {
-    "x": 51,
-    "y": 28
-  },
-  "assets/joueurs/clem-requins-Photoroom.jpg": {
-    "x": 50,
-    "y": 28
-  },
-  "assets/joueurs/damien-aigles-Photoroom.jpg": {
-    "x": 50,
-    "y": 34
-  },
-  "assets/joueurs/damien-lions-Photoroom.jpg": {
-    "x": 49,
-    "y": 34
-  },
-  "assets/joueurs/damien-pythons-Photoroom.jpg": {
-    "x": 50,
-    "y": 34
-  },
-  "assets/joueurs/damien-requins-Photoroom.jpg": {
-    "x": 50,
-    "y": 34
-  },
-  "assets/joueurs/david-di-gloria-aigles-Photoroom.jpg": {
-    "x": 20,
-    "y": 26
-  },
-  "assets/joueurs/david-di-gloria-lions-Photoroom.jpg": {
-    "x": 20,
-    "y": 25
-  },
-  "assets/joueurs/david-di-gloria-pythons-Photoroom.jpg": {
-    "x": 20,
-    "y": 25
-  },
-  "assets/joueurs/david-di-gloria-requins-Photoroom.jpg": {
-    "x": 20,
-    "y": 25
-  },
-  "assets/joueurs/doc-aigles-Photoroom.jpg": {
-    "x": 55,
-    "y": 36
-  },
-  "assets/joueurs/doc-lions-Photoroom.jpg": {
-    "x": 55,
-    "y": 36
-  },
-  "assets/joueurs/doc-pythons-Photoroom.jpg": {
-    "x": 55,
-    "y": 35
-  },
-  "assets/joueurs/doc-requins-Photoroom.jpg": {
-    "x": 55,
-    "y": 35
-  },
-  "assets/joueurs/elodie-aigles-Photoroom.jpg": {
-    "x": 42,
-    "y": 27
-  },
-  "assets/joueurs/elodie-lions-Photoroom.jpg": {
-    "x": 42,
-    "y": 27
-  },
-  "assets/joueurs/elodie-pythons-Photoroom.jpg": {
-    "x": 43,
-    "y": 27
-  },
-  "assets/joueurs/elodie-requins-Photoroom.jpg": {
-    "x": 43,
-    "y": 27
-  },
-  "assets/joueurs/emilie-marliere-aigles-Photoroom.jpg": {
-    "x": 48,
-    "y": 27
-  },
-  "assets/joueurs/emilie-marliere-lions-Photoroom.jpg": {
-    "x": 49,
-    "y": 27
-  },
-  "assets/joueurs/emilie-marliere-pythons-Photoroom.jpg": {
-    "x": 49,
-    "y": 27
-  },
-  "assets/joueurs/emilie-marliere-requins-Photoroom.jpg": {
-    "x": 48,
-    "y": 27
-  },
-  "assets/joueurs/filou-aigles-Photoroom.jpg": {
-    "x": 35,
-    "y": 32
-  },
-  "assets/joueurs/filou-lions-Photoroom.jpg": {
-    "x": 37,
-    "y": 33
-  },
-  "assets/joueurs/filou-pythons-Photoroom.jpg": {
-    "x": 36,
-    "y": 31
-  },
-  "assets/joueurs/filou-requins-Photoroom.jpg": {
-    "x": 36,
-    "y": 30
-  },
-  "assets/joueurs/gab-de-pat-aigles-Photoroom.jpg": {
-    "x": 47,
-    "y": 45
-  },
-  "assets/joueurs/gab-de-pat-lions-Photoroom.jpg": {
-    "x": 47,
-    "y": 45
-  },
-  "assets/joueurs/gab-de-pat-pythons-Photoroom.jpg": {
-    "x": 47,
-    "y": 45
-  },
-  "assets/joueurs/gab-de-pat-requins-Photoroom.jpg": {
-    "x": 47,
-    "y": 45
-  },
-  "assets/joueurs/jess-aigles-Photoroom.jpg": {
-    "x": 48,
-    "y": 21
-  },
-  "assets/joueurs/jess-lions-Photoroom.jpg": {
-    "x": 48,
-    "y": 21
-  },
-  "assets/joueurs/jess-pythons-Photoroom.jpg": {
-    "x": 47,
-    "y": 21
-  },
-  "assets/joueurs/jess-requins-Photoroom.jpg": {
-    "x": 47,
-    "y": 21
-  },
-  "assets/joueurs/kostia-aigles-Photoroom.jpg": {
-    "x": 36,
-    "y": 28
-  },
-  "assets/joueurs/kostia-lions-Photoroom.jpg": {
-    "x": 36,
-    "y": 34
-  },
-  "assets/joueurs/kostia-pythons-Photoroom.jpg": {
-    "x": 35,
-    "y": 30
-  },
-  "assets/joueurs/kostia-requins-Photoroom.jpg": {
-    "x": 35,
-    "y": 28
-  },
-  "assets/joueurs/lenny-b-conil-aigles-Photoroom.jpg": {
-    "x": 46,
-    "y": 22
-  },
-  "assets/joueurs/lenny-b-conil-lions-Photoroom.jpg": {
-    "x": 45,
-    "y": 22
-  },
-  "assets/joueurs/lenny-b-conil-pythons-Photoroom.jpg": {
-    "x": 45,
-    "y": 22
-  },
-  "assets/joueurs/lenny-b-conil-requins-Photoroom.jpg": {
-    "x": 45,
-    "y": 22
-  },
-  "assets/joueurs/mailis-aigles-Photoroom.jpg": {
-    "x": 44,
-    "y": 24
-  },
-  "assets/joueurs/mailis-lions-Photoroom.jpg": {
-    "x": 43,
-    "y": 23
-  },
-  "assets/joueurs/mailis-pythons-Photoroom.jpg": {
-    "x": 42,
-    "y": 24
-  },
-  "assets/joueurs/mailis-requins-Photoroom.jpg": {
-    "x": 42,
-    "y": 23
-  },
-  "assets/joueurs/mp-aigles-Photoroom.jpg": {
-    "x": 50,
-    "y": 33
-  },
-  "assets/joueurs/mp-lions-Photoroom.jpg": {
-    "x": 49,
-    "y": 34
-  },
-  "assets/joueurs/mp-pythons-Photoroom.jpg": {
-    "x": 50,
-    "y": 33
-  },
-  "assets/joueurs/mp-requins-Photoroom.jpg": {
-    "x": 50,
-    "y": 33
-  },
-  "assets/joueurs/nicolas-aigles-Photoroom.jpg": {
-    "x": 64,
-    "y": 26
-  },
-  "assets/joueurs/nicolas-lions-Photoroom.jpg": {
-    "x": 64,
-    "y": 26
-  },
-  "assets/joueurs/nicolas-pythons-Photoroom.jpg": {
-    "x": 64,
-    "y": 25
-  },
-  "assets/joueurs/nicolas-requins-Photoroom.jpg": {
-    "x": 64,
-    "y": 24
-  },
-  "assets/joueurs/pec-aigles-Photoroom.jpg": {
-    "x": 41,
-    "y": 27
-  },
-  "assets/joueurs/pec-lions-Photoroom.jpg": {
-    "x": 41,
-    "y": 26
-  },
-  "assets/joueurs/pec-pythons-Photoroom.jpg": {
-    "x": 42,
-    "y": 27
-  },
-  "assets/joueurs/pec-requins-Photoroom.jpg": {
-    "x": 42,
-    "y": 27
-  },
-  "assets/joueurs/philippe-verbeke-aigles-Photoroom.jpg": {
-    "x": 49,
-    "y": 32
-  },
-  "assets/joueurs/philippe-verbeke-lions-Photoroom.jpg": {
-    "x": 48,
-    "y": 32
-  },
-  "assets/joueurs/philippe-verbeke-pythons-Photoroom.jpg": {
-    "x": 49,
-    "y": 31
-  },
-  "assets/joueurs/philippe-verbeke-requins-Photoroom.jpg": {
-    "x": 48,
-    "y": 31
-  },
-  "assets/joueurs/polo-aigles-Photoroom.jpg": {
-    "x": 55,
-    "y": 17
-  },
-  "assets/joueurs/polo-lions-Photoroom.jpg": {
-    "x": 56,
-    "y": 17
-  },
-  "assets/joueurs/polo-pythons-Photoroom.jpg": {
-    "x": 55,
-    "y": 18
-  },
-  "assets/joueurs/polo-requins-Photoroom.jpg": {
-    "x": 54,
-    "y": 17
-  },
-  "assets/joueurs/q-aigles-Photoroom.jpg": {
-    "x": 44,
-    "y": 24
-  },
-  "assets/joueurs/q-lions-Photoroom.jpg": {
-    "x": 43,
-    "y": 24
-  },
-  "assets/joueurs/q-pythons-Photoroom.jpg": {
-    "x": 43,
-    "y": 24
-  },
-  "assets/joueurs/q-requins-Photoroom.jpg": {
-    "x": 43,
-    "y": 23
-  },
-  "assets/joueurs/sbu-aigles-Photoroom.jpg": {
-    "x": 52,
-    "y": 36
-  },
-  "assets/joueurs/sbu-lions-Photoroom.jpg": {
-    "x": 52,
-    "y": 36
-  },
-  "assets/joueurs/sbu-pythons-Photoroom.jpg": {
-    "x": 53,
-    "y": 35
-  },
-  "assets/joueurs/sbu-requins-Photoroom.jpg": {
-    "x": 53,
-    "y": 36
-  },
-  "assets/joueurs/sophie-hoyas-aigles-Photoroom.jpg": {
-    "x": 54,
-    "y": 28
-  },
-  "assets/joueurs/sophie-hoyas-lions-Photoroom.jpg": {
-    "x": 54,
-    "y": 28
-  },
-  "assets/joueurs/sophie-hoyas-pythons-Photoroom.jpg": {
-    "x": 54,
-    "y": 28
-  },
-  "assets/joueurs/sophie-hoyas-requins-Photoroom.jpg": {
-    "x": 54,
-    "y": 28
-  },
-  "assets/joueurs/tony-aigles-Photoroom.jpg": {
-    "x": 57,
-    "y": 26
-  },
-  "assets/joueurs/tony-lions-Photoroom.jpg": {
-    "x": 59,
-    "y": 25
-  },
-  "assets/joueurs/tony-pythons-Photoroom.jpg": {
-    "x": 57,
-    "y": 25
-  },
-  "assets/joueurs/tony-requins-Photoroom.jpg": {
-    "x": 57,
-    "y": 26
-  },
-  "assets/joueurs/valentine-aigles-Photoroom.jpg": {
-    "x": 42,
-    "y": 27
-  },
-  "assets/joueurs/valentine-lions-Photoroom.jpg": {
-    "x": 43,
-    "y": 28
-  },
-  "assets/joueurs/valentine-pythons-Photoroom.jpg": {
-    "x": 43,
-    "y": 26
-  },
-  "assets/joueurs/valentine-requins-Photoroom.jpg": {
-    "x": 42,
-    "y": 25
-  },
-  "assets/joueurs/vincent-aigles-Photoroom.jpg": {
-    "x": 42,
-    "y": 23
-  },
-  "assets/joueurs/vincent-lions-Photoroom.jpg": {
-    "x": 41,
-    "y": 23
-  },
-  "assets/joueurs/vincent-pythons-Photoroom.jpg": {
-    "x": 41,
-    "y": 22
-  },
-  "assets/joueurs/vincent-requins-Photoroom.jpg": {
-    "x": 41,
-    "y": 22
-  },
-  "assets/joueurs/wilhem-aigles-Photoroom.jpg": {
-    "x": 46,
-    "y": 34
-  },
-  "assets/joueurs/wilhem-lions-Photoroom.jpg": {
-    "x": 46,
-    "y": 34
-  },
-  "assets/joueurs/wilhem-pythons-Photoroom.jpg": {
-    "x": 46,
-    "y": 34
-  },
-  "assets/joueurs/wilhem-requins-Photoroom.jpg": {
-    "x": 46,
-    "y": 34
+  "assets/joueurs/alain" : {
+    "x" : 44,
+    "y" : 24
+  },
+  "assets/joueurs/alain-aigles" : {
+    "x" : 44,
+    "y" : 24
+  },
+  "assets/joueurs/alain-lions" : {
+    "x" : 44,
+    "y" : 24
+  },
+  "assets/joueurs/alain-pythons" : {
+    "x" : 44,
+    "y" : 24
+  },
+  "assets/joueurs/alain-requins" : {
+    "x" : 44,
+    "y" : 24
+  },
+  "assets/joueurs/alex-colusi" : {
+    "x" : 44,
+    "y" : 26
+  },
+  "assets/joueurs/alex-colusi-aigles" : {
+    "x" : 46,
+    "y" : 36
+  },
+  "assets/joueurs/alex-colusi-lions" : {
+    "x" : 44,
+    "y" : 26
+  },
+  "assets/joueurs/alex-colusi-pythons" : {
+    "x" : 44,
+    "y" : 26
+  },
+  "assets/joueurs/alex-colusi-requins" : {
+    "x" : 44,
+    "y" : 26
+  },
+  "assets/joueurs/alexandra-ducoux" : {
+    "x" : 50,
+    "y" : 27
+  },
+  "assets/joueurs/alexandra-ducoux-aigles" : {
+    "x" : 63,
+    "y" : 38
+  },
+  "assets/joueurs/alexandra-ducoux-lions" : {
+    "x" : 47,
+    "y" : 27
+  },
+  "assets/joueurs/alexandra-ducoux-pythons" : {
+    "x" : 47,
+    "y" : 27
+  },
+  "assets/joueurs/alexandra-ducoux-requins" : {
+    "x" : 47,
+    "y" : 27
+  },
+  "assets/joueurs/arnaud" : {
+    "x" : 39,
+    "y" : 21
+  },
+  "assets/joueurs/arnaud-aigles" : {
+    "x" : 46,
+    "y" : 35
+  },
+  "assets/joueurs/arnaud-lions" : {
+    "x" : 39,
+    "y" : 21
+  },
+  "assets/joueurs/arnaud-pythons" : {
+    "x" : 40,
+    "y" : 21
+  },
+  "assets/joueurs/arnaud-requins" : {
+    "x" : 40,
+    "y" : 21
+  },
+  "assets/joueurs/aurore" : {
+    "x" : 48,
+    "y" : 23
+  },
+  "assets/joueurs/aurore-aigles" : {
+    "x" : 47,
+    "y" : 23
+  },
+  "assets/joueurs/aurore-lions" : {
+    "x" : 47,
+    "y" : 23
+  },
+  "assets/joueurs/aurore-pythons" : {
+    "x" : 47,
+    "y" : 23
+  },
+  "assets/joueurs/aurore-requins" : {
+    "x" : 47,
+    "y" : 23
+  },
+  "assets/joueurs/cath" : {
+    "x" : 47,
+    "y" : 24
+  },
+  "assets/joueurs/cath-aigles" : {
+    "x" : 47,
+    "y" : 24
+  },
+  "assets/joueurs/cath-lions" : {
+    "x" : 47,
+    "y" : 24
+  },
+  "assets/joueurs/cath-pythons" : {
+    "x" : 47,
+    "y" : 24
+  },
+  "assets/joueurs/cath-requins" : {
+    "x" : 47,
+    "y" : 24
+  },
+  "assets/joueurs/charlotte-otlet" : {
+    "x" : 48,
+    "y" : 41
+  },
+  "assets/joueurs/charlotte-otlet-aigles" : {
+    "x" : 48,
+    "y" : 41
+  },
+  "assets/joueurs/charlotte-otlet-lions" : {
+    "x" : 48,
+    "y" : 41
+  },
+  "assets/joueurs/charlotte-otlet-pythons" : {
+    "x" : 48,
+    "y" : 41
+  },
+  "assets/joueurs/charlotte-otlet-requins" : {
+    "x" : 48,
+    "y" : 41
+  },
+  "assets/joueurs/clem-aigles" : {
+    "x" : 51,
+    "y" : 29
+  },
+  "assets/joueurs/clem-lions" : {
+    "x" : 53,
+    "y" : 40
+  },
+  "assets/joueurs/clem-pythons" : {
+    "x" : 51,
+    "y" : 29
+  },
+  "assets/joueurs/clem-requins" : {
+    "x" : 51,
+    "y" : 29
+  },
+  "assets/joueurs/david-di-gloria" : {
+    "x" : 36,
+    "y" : 26
+  },
+  "assets/joueurs/david-di-gloria-aigles" : {
+    "x" : 57,
+    "y" : 39
+  },
+  "assets/joueurs/david-di-gloria-lions" : {
+    "x" : 36,
+    "y" : 26
+  },
+  "assets/joueurs/david-di-gloria-pythons" : {
+    "x" : 36,
+    "y" : 26
+  },
+  "assets/joueurs/david-di-gloria-requins" : {
+    "x" : 36,
+    "y" : 26
+  },
+  "assets/joueurs/david-di-gloria-tshirt-happy" : {
+    "x" : 52,
+    "y" : 34
+  },
+  "assets/joueurs/elodie" : {
+    "x" : 46,
+    "y" : 27
+  },
+  "assets/joueurs/elodie-aigles" : {
+    "x" : 46,
+    "y" : 27
+  },
+  "assets/joueurs/elodie-lions" : {
+    "x" : 45,
+    "y" : 27
+  },
+  "assets/joueurs/elodie-pythons" : {
+    "x" : 45,
+    "y" : 27
+  },
+  "assets/joueurs/elodie-requins" : {
+    "x" : 46,
+    "y" : 28
+  },
+  "assets/joueurs/émilie-marlière" : {
+    "x" : 47,
+    "y" : 27
+  },
+  "assets/joueurs/emilie-marliere-aigles" : {
+    "x" : 47,
+    "y" : 27
+  },
+  "assets/joueurs/emilie-marliere-lions" : {
+    "x" : 47,
+    "y" : 27
+  },
+  "assets/joueurs/emilie-marliere-pythons" : {
+    "x" : 47,
+    "y" : 27
+  },
+  "assets/joueurs/emilie-marliere-requins" : {
+    "x" : 52,
+    "y" : 36
+  },
+  "assets/joueurs/filou" : {
+    "x" : 38,
+    "y" : 26
+  },
+  "assets/joueurs/filou-aigles" : {
+    "x" : 37,
+    "y" : 26
+  },
+  "assets/joueurs/filou-lions" : {
+    "x" : 38,
+    "y" : 26
+  },
+  "assets/joueurs/filou-pythons" : {
+    "x" : 38,
+    "y" : 26
+  },
+  "assets/joueurs/filou-requins" : {
+    "x" : 37,
+    "y" : 26
+  },
+  "assets/joueurs/gab-de-pat" : {
+    "x" : 47,
+    "y" : 44
+  },
+  "assets/joueurs/gab-de-pat-aigles" : {
+    "x" : 47,
+    "y" : 44
+  },
+  "assets/joueurs/gab-de-pat-lions" : {
+    "x" : 47,
+    "y" : 44
+  },
+  "assets/joueurs/gab-de-pat-pythons" : {
+    "x" : 47,
+    "y" : 44
+  },
+  "assets/joueurs/gab-de-pat-requins" : {
+    "x" : 51,
+    "y" : 40
+  },
+  "assets/joueurs/gab-de-pat-tshirt-happy" : {
+    "x" : 54,
+    "y" : 36
+  },
+  "assets/joueurs/img" : {
+    "x" : 50,
+    "y" : 35
+  },
+  "assets/joueurs/img_1" : {
+    "x" : 46,
+    "y" : 26
+  },
+  "assets/joueurs/jésica" : {
+    "x" : 49,
+    "y" : 19
+  },
+  "assets/joueurs/lenny-b-conil" : {
+    "x" : 45,
+    "y" : 22
+  },
+  "assets/joueurs/lenny-b-conil-aigles" : {
+    "x" : 45,
+    "y" : 22
+  },
+  "assets/joueurs/lenny-b-conil-lions" : {
+    "x" : 45,
+    "y" : 22
+  },
+  "assets/joueurs/lenny-b-conil-pythons" : {
+    "x" : 45,
+    "y" : 22
+  },
+  "assets/joueurs/lenny-b-conil-requins" : {
+    "x" : 45,
+    "y" : 22
+  },
+  "assets/joueurs/maïlis" : {
+    "x" : 45,
+    "y" : 21
+  },
+  "assets/joueurs/mailis-aigles" : {
+    "x" : 45,
+    "y" : 21
+  },
+  "assets/joueurs/mailis-lions" : {
+    "x" : 45,
+    "y" : 21
+  },
+  "assets/joueurs/mailis-pythons" : {
+    "x" : 45,
+    "y" : 21
+  },
+  "assets/joueurs/mailis-requins" : {
+    "x" : 44,
+    "y" : 21
+  },
+  "assets/joueurs/mp-aigles" : {
+    "x" : 48,
+    "y" : 32
+  },
+  "assets/joueurs/mp-lions" : {
+    "x" : 48,
+    "y" : 32
+  },
+  "assets/joueurs/mp-pythons" : {
+    "x" : 48,
+    "y" : 32
+  },
+  "assets/joueurs/mp-requins" : {
+    "x" : 48,
+    "y" : 32
+  },
+  "assets/joueurs/nicolas" : {
+    "x" : 58,
+    "y" : 25
+  },
+  "assets/joueurs/nicolas-aigles" : {
+    "x" : 58,
+    "y" : 25
+  },
+  "assets/joueurs/nicolas-lions" : {
+    "x" : 58,
+    "y" : 26
+  },
+  "assets/joueurs/nicolas-pythons" : {
+    "x" : 58,
+    "y" : 26
+  },
+  "assets/joueurs/nicolas-requins" : {
+    "x" : 58,
+    "y" : 25
+  },
+  "assets/joueurs/pec" : {
+    "x" : 42,
+    "y" : 24
+  },
+  "assets/joueurs/pec-aigles" : {
+    "x" : 53,
+    "y" : 33
+  },
+  "assets/joueurs/pec-lions" : {
+    "x" : 42,
+    "y" : 24
+  },
+  "assets/joueurs/pec-pythons" : {
+    "x" : 42,
+    "y" : 24
+  },
+  "assets/joueurs/pec-requins" : {
+    "x" : 42,
+    "y" : 24
+  },
+  "assets/joueurs/philippe-verbeke" : {
+    "x" : 53,
+    "y" : 29
+  },
+  "assets/joueurs/philippe-verbeke-aigles" : {
+    "x" : 52,
+    "y" : 29
+  },
+  "assets/joueurs/philippe-verbeke-lions" : {
+    "x" : 54,
+    "y" : 29
+  },
+  "assets/joueurs/philippe-verbeke-pythons" : {
+    "x" : 51,
+    "y" : 29
+  },
+  "assets/joueurs/philippe-verbeke-requins" : {
+    "x" : 53,
+    "y" : 28
+  },
+  "assets/joueurs/polo-aigles" : {
+    "x" : 54,
+    "y" : 15
+  },
+  "assets/joueurs/polo-lions" : {
+    "x" : 47,
+    "y" : 37
+  },
+  "assets/joueurs/polo-pythons" : {
+    "x" : 53,
+    "y" : 16
+  },
+  "assets/joueurs/polo-requins" : {
+    "x" : 53,
+    "y" : 15
+  },
+  "assets/joueurs/q" : {
+    "x" : 42,
+    "y" : 25
+  },
+  "assets/joueurs/q-aigles" : {
+    "x" : 41,
+    "y" : 24
+  },
+  "assets/joueurs/q-lions" : {
+    "x" : 42,
+    "y" : 24
+  },
+  "assets/joueurs/q-pythons" : {
+    "x" : 42,
+    "y" : 24
+  },
+  "assets/joueurs/q-requins" : {
+    "x" : 51,
+    "y" : 35
+  },
+  "assets/joueurs/sbu-aigles" : {
+    "x" : 51,
+    "y" : 35
+  },
+  "assets/joueurs/sbu-lions" : {
+    "x" : 51,
+    "y" : 35
+  },
+  "assets/joueurs/sbu-pythons" : {
+    "x" : 51,
+    "y" : 35
+  },
+  "assets/joueurs/sbu-requins" : {
+    "x" : 51,
+    "y" : 36
+  },
+  "assets/joueurs/sophie-hoyas" : {
+    "x" : 54,
+    "y" : 27
+  },
+  "assets/joueurs/sophie-hoyas-aigles" : {
+    "x" : 54,
+    "y" : 27
+  },
+  "assets/joueurs/sophie-hoyas-lions" : {
+    "x" : 54,
+    "y" : 27
+  },
+  "assets/joueurs/sophie-hoyas-pythons" : {
+    "x" : 54,
+    "y" : 27
+  },
+  "assets/joueurs/sophie-hoyas-requins" : {
+    "x" : 52,
+    "y" : 37
+  },
+  "assets/joueurs/valentine" : {
+    "x" : 47,
+    "y" : 25
+  },
+  "assets/joueurs/valentine-aigles" : {
+    "x" : 42,
+    "y" : 37
+  },
+  "assets/joueurs/valentine-lions" : {
+    "x" : 47,
+    "y" : 25
+  },
+  "assets/joueurs/valentine-pythons" : {
+    "x" : 47,
+    "y" : 25
+  },
+  "assets/joueurs/valentine-requins" : {
+    "x" : 47,
+    "y" : 25
+  },
+  "assets/joueurs/wilhem-aigles" : {
+    "x" : 43,
+    "y" : 32
+  },
+  "assets/joueurs/wilhem-lions" : {
+    "x" : 42,
+    "y" : 32
+  },
+  "assets/joueurs/wilhem-pythons" : {
+    "x" : 43,
+    "y" : 32
+  },
+  "assets/joueurs/wilhem-requins" : {
+    "x" : 41,
+    "y" : 41
   }
 }

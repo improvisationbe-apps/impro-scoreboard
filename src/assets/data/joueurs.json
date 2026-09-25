@@ -144,5 +144,10 @@
   },
   {
     "prenom": "Michael"
+  },
+  {
+    "prenom": "Romain",
+    "nom": "KH",
+    "img": "assets/joueurs/romain-kh"
   }
 ]
