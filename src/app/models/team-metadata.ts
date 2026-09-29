@@ -21,6 +21,11 @@ export class TeamMetadata {
     return this._dto.couleur;
   }
 
+  /** Variante dédiée du logo improvisation.be (générée au code de l'équipe), sinon celle de sa couleur. */
+  get logoVariant(): string | undefined {
+    return this._dto.couleurs?.length ? this._code : undefined;
+  }
+
   get jerseys(): number[] {
     return this._dto.vareuses || [];
   }

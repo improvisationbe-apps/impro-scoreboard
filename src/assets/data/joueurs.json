@@ -149,5 +149,22 @@
     "prenom": "Romain",
     "nom": "KH",
     "img": "assets/joueurs/romain-kh"
+  },
+  {
+    "prenom": "Charlie",
+    "img": "assets/joueurs/charlie"
+  },
+  {
+    "prenom": "Dereck",
+    "img": "assets/joueurs/dereck"
+  },
+  {
+    "prenom": "Hugues",
+    "img": "assets/joueurs/hugues"
+  },
+  {
+    "prenom": "Marie-Eve",
+    "img": "assets/joueurs/marie-eve",
+    "femme": true
   }
 ]

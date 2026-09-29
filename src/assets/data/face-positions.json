@@ -16,8 +16,8 @@
     "y" : 24
   },
   "assets/joueurs/alain-requins" : {
-    "x" : 44,
-    "y" : 24
+    "x" : 47,
+    "y" : 38
   },
   "assets/joueurs/alex-colusi" : {
     "x" : 44,
@@ -99,9 +99,17 @@
     "x" : 47,
     "y" : 23
   },
+  "assets/joueurs/aurore-tshirt-happy" : {
+    "x" : 45,
+    "y" : 36
+  },
   "assets/joueurs/cath" : {
     "x" : 47,
     "y" : 24
+  },
+  "assets/joueurs/cath-aigle" : {
+    "x" : 53,
+    "y" : 37
   },
   "assets/joueurs/cath-aigles" : {
     "x" : 47,
@@ -119,6 +127,14 @@
     "x" : 47,
     "y" : 24
   },
+  "assets/joueurs/cath-tshirt-fight" : {
+    "x" : 54,
+    "y" : 36
+  },
+  "assets/joueurs/charlie-tshirt-fight" : {
+    "x" : 44,
+    "y" : 37
+  },
   "assets/joueurs/charlotte-otlet" : {
     "x" : 48,
     "y" : 41
@@ -129,7 +145,7 @@
   },
   "assets/joueurs/charlotte-otlet-lions" : {
     "x" : 48,
-    "y" : 41
+    "y" : 35
   },
   "assets/joueurs/charlotte-otlet-pythons" : {
     "x" : 48,
@@ -175,9 +191,17 @@
     "x" : 36,
     "y" : 26
   },
+  "assets/joueurs/david-di-gloria-tshirt-fight" : {
+    "x" : 48,
+    "y" : 38
+  },
   "assets/joueurs/david-di-gloria-tshirt-happy" : {
     "x" : 52,
     "y" : 34
+  },
+  "assets/joueurs/dereck-tshirt-fight" : {
+    "x" : 38,
+    "y" : 42
   },
   "assets/joueurs/elodie" : {
     "x" : 46,
@@ -189,7 +213,7 @@
   },
   "assets/joueurs/elodie-lions" : {
     "x" : 45,
-    "y" : 27
+    "y" : 35
   },
   "assets/joueurs/elodie-pythons" : {
     "x" : 45,
@@ -261,7 +285,11 @@
   },
   "assets/joueurs/gab-de-pat-tshirt-happy" : {
     "x" : 54,
-    "y" : 36
+    "y" : 35
+  },
+  "assets/joueurs/hugues-tshirt-fight" : {
+    "x" : 48,
+    "y" : 44
   },
   "assets/joueurs/img" : {
     "x" : 50,
@@ -284,8 +312,8 @@
     "y" : 22
   },
   "assets/joueurs/lenny-b-conil-lions" : {
-    "x" : 45,
-    "y" : 22
+    "x" : 43,
+    "y" : 37
   },
   "assets/joueurs/lenny-b-conil-pythons" : {
     "x" : 45,
@@ -312,8 +340,12 @@
     "y" : 21
   },
   "assets/joueurs/mailis-requins" : {
-    "x" : 44,
-    "y" : 21
+    "x" : 54,
+    "y" : 37
+  },
+  "assets/joueurs/marie-eve-tshirt-fight" : {
+    "x" : 52,
+    "y" : 40
   },
   "assets/joueurs/mp-aigles" : {
     "x" : 48,
@@ -427,6 +459,10 @@
     "x" : 51,
     "y" : 35
   },
+  "assets/joueurs/romain-kh-requins" : {
+    "x" : 48,
+    "y" : 38
+  },
   "assets/joueurs/sbu-aigles" : {
     "x" : 51,
     "y" : 35
@@ -462,6 +498,10 @@
   "assets/joueurs/sophie-hoyas-requins" : {
     "x" : 52,
     "y" : 37
+  },
+  "assets/joueurs/sophie-hoyas-tshirt-happy" : {
+    "x" : 52,
+    "y" : 40
   },
   "assets/joueurs/valentine" : {
     "x" : 47,

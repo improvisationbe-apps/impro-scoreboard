@@ -93,6 +93,13 @@
   filter: drop-shadow(0 0 24px var(--team-color, #fff));
 }
 
+/* Drapeaux des équipes internationales (image portrait pour garder des bandes égales) : on remplit le cadre */
+.story-team-logo[src*="/belgique."],
+.story-team-logo[src*="/quebec."] {
+  object-fit: cover;
+  border-radius: 12px;
+}
+
 .story-team-name {
   font-size: 48px;
   font-weight: 900;

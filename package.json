@@ -29,6 +29,7 @@
     "ng": "ng",
     "photos:manifest": "node scripts/photos-manifest.js",
     "photos:cutout": "mkdir -p scripts/.cache && swiftc -O -o scripts/.cache/cutout scripts/cutout.swift && scripts/.cache/cutout",
+    "flags:build": "node scripts/flag-variants.js",
     "vote:build": "node scripts/vote-build.js",
     "vote:serve": "npm run vote:build && npx --yes serve vote -l 4300",
     "vote:apercu": "node scripts/vote-apercu.js",

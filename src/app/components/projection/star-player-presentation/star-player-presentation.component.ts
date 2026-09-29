@@ -11,7 +11,7 @@ import {PlayerMetadata} from "@models/player-metadata";
 import {StarPlayer} from "@models/star-player";
 import {RoleNamePipe} from "@pipes/role-name.pipe";
 import {PlayerMediaComponent} from "@components/projection/player-media/player-media.component";
-import {whiteLogoForColor} from "@constants/logo.constants";
+import {whiteLogoForTeam} from "@constants/logo.constants";
 import {TeamLayoutComponent} from "@components/projection/team-layout/team-layout.component";
 
 /**
@@ -73,7 +73,7 @@ export class StarPlayerPresentationComponent {
   });
 
   /** Logo improvisation.be à la couleur de l'équipe du joueur (mono si aucun joueur). */
-  logoSrc: Signal<string> = computed(() => whiteLogoForColor(this.teamMetadata()?.color));
+  logoSrc: Signal<string> = computed(() => whiteLogoForTeam(this.teamMetadata()));
 
 
 

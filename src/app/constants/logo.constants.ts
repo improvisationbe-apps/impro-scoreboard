@@ -19,6 +19,23 @@ const LOGO_COLOR_VARIANTS: Record<string, string> = {
 
 export type LogoKind = 'principal' | 'secondaire' | 'tertiaire';
 
+/** Le strict nécessaire d'une équipe pour choisir son logo (voir TeamMetadata). */
+export interface LogoTeam {
+  color?: string;
+  logoVariant?: string;
+}
+
+/**
+ * Logo sur fond sombre d'une équipe : sa variante dédiée si elle en a une (équipes internationales, logo
+ * exactement à la couleur du drapeau, généré par `npm run flags:build`), sinon la variante de sa couleur.
+ */
+export function whiteLogoForTeam(team?: LogoTeam, kind: LogoKind = 'principal'): string {
+  if (team?.logoVariant) {
+    return `assets/logos/logo_${kind} - white ${team.logoVariant}.svg`;
+  }
+  return whiteLogoForColor(team?.color, kind);
+}
+
 /**
  * Logo sur fond sombre, à la couleur de l'équipe. Retombe sur le mono si la couleur
  * n'a pas de variante dédiée (ou si aucune couleur n'est fournie).

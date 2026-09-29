@@ -18,7 +18,7 @@ import {MediaHandling} from "@models/media-handling";
 import {MediaHandlingDto} from "../dtos";
 import {ProjectionData} from "@models/projection-data";
 import {ProjectionDataDto} from "../dtos/projection-data.dto";
-import {whiteLogoForColor} from "@constants/logo.constants";
+import {whiteLogoForColor, whiteLogoForTeam} from "@constants/logo.constants";
 import {find} from "lodash-es";
 import {Team} from "@models/team";
 import {StarPlayer} from "@models/star-player";
@@ -118,7 +118,7 @@ export class ImproDataService {
     const leader: Team = teamA.score > teamB.score ? teamA : teamB;
     const metadata: TeamMetadata = find(this.teams.value(), (t: TeamMetadata) => t.name === leader.name);
 
-    return whiteLogoForColor(metadata?.color);
+    return whiteLogoForTeam(metadata);
   });
 
   public players: ResourceRef<PlayerMetadata[]> = rxResource({

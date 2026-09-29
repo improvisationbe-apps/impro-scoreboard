@@ -8,7 +8,7 @@ import {PlayerMetadata} from "@models/player-metadata";
 import {KeyValueNoSortPipe} from "@pipes/key-value-no-sort.pipe";
 import {RoleNamePipe} from "@pipes/role-name.pipe";
 import {Player} from "@models/player";
-import {whiteLogoForColor} from "@constants/logo.constants";
+import {whiteLogoForTeam} from "@constants/logo.constants";
 import {TeamLayoutComponent} from "@components/projection/team-layout/team-layout.component";
 import {TeamMascotComponent} from "@components/projection/team-mascot/team-mascot.component";
 
@@ -39,7 +39,7 @@ export class TeamPresentationComponent {
   })
 
   /** Logo improvisation.be à la couleur de l'équipe, affiché à droite de la mascotte. */
-  logoSrc: Signal<string> = computed(() => whiteLogoForColor(this.teamMetadata()?.color));
+  logoSrc: Signal<string> = computed(() => whiteLogoForTeam(this.teamMetadata()));
 
   displayedPlayers: Signal<Record<string, Player>> = computed(() => {
     const players = this.team().players;
