@@ -38,7 +38,7 @@ dans `src/app/constants/vote.constants.ts`).
 Chaque bulletin porte aussi une signature technique du navigateur (`sig`, haché SHA-256 de : user agent, modèle
 Android via Client Hints, écran, langue, fuseau, carte graphique… et `agent`, libellé lisible du type « iPhone · iOS 18.1 ·
 390×844 »). Stable en navigation privée, elle sert à la détection des votes suspects. Elle n'est pas unique : les iPhone
-d'un même modèle sous la même version d'iOS partagent la même. La page de vote en informe le votant en une ligne.
+d'un même modèle sous la même version d'iOS partagent la même.
 
 Une seule voix par téléphone et par match : une empreinte d'appareil (identifiant aléatoire gardé dans le
 navigateur) sert d'identifiant au bulletin, et les règles refusent un second bulletin pour la même empreinte.
