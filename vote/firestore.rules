@@ -5,7 +5,7 @@ service cloud.firestore {
     // Adresses Google autorisées à lire les résultats (page resultats.html).
     function isOrganizer() {
       return request.auth != null
-        && request.auth.token.email in ['david.digloria77@gmail.com'];
+        && request.auth.token.email in ['david.digloria77@gmail.com','ligueimprovisation@gmail.com'];
     }
 
     function isCode(value) {
@@ -27,17 +27,16 @@ service cloud.firestore {
 
       match /ballots/{ballotId} {
         // Un bulletin par appareil (l'empreinte d'appareil est l'identifiant du document) : trois choix distincts,
-        // e-mail facultatif pour le tirage au sort (et newsletter si demandée, ce qui suppose un e-mail),
+        // e-mail facultatif pour le tirage au sort,
         // signature technique du navigateur (sig haché + libellé agent) pour repérer les votes en double,
         // horodatage serveur. Jamais modifiable, donc pas de second vote.
         allow read: if isOrganizer();
-        allow create: if request.resource.data.keys().hasOnly(['device', 'first', 'second', 'third', 'sig', 'agent', 'email', 'newsletter', 'createdAt'])
+        allow create: if request.resource.data.keys().hasOnly(['device', 'first', 'second', 'third', 'sig', 'agent', 'email', 'createdAt'])
           && request.resource.data.device is string && request.resource.data.device.size() > 8 && request.resource.data.device.size() < 80
           && ballotId == request.resource.data.device
           && (!('sig' in request.resource.data) || (request.resource.data.sig is string && request.resource.data.sig.size() >= 8 && request.resource.data.sig.size() <= 64))
           && (!('agent' in request.resource.data) || (request.resource.data.agent is string && request.resource.data.agent.size() <= 120))
           && (!('email' in request.resource.data) || isEmail(request.resource.data.email))
-          && (!('newsletter' in request.resource.data) || (request.resource.data.newsletter == true && 'email' in request.resource.data))
           && isCode(request.resource.data.first)
           && isCode(request.resource.data.second)
           && isCode(request.resource.data.third)

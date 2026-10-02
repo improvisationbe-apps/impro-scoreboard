@@ -21,8 +21,6 @@ const newsletterEl = $('#newsletter'), newsletterTitleEl = $('#newsletter-title'
 
 /** Adresses laissées pour le tirage au sort, dédoublonnées, pour le match affiché. */
 let emails = [];
-/** Parmi elles, celles qui ont coché l'inscription à la newsletter. */
-let newsletterEmails = [];
 
 let meta = {players: [], teams: {}};
 let matches = [];
@@ -160,12 +158,11 @@ async function tally() {
     .sort((x, y) => y.points - x.points || y.stars[0] - x.stars[0] || y.stars[1] - x.stars[1] || y.stars[2] - x.stars[2])
     .slice(0, TOP);
   emails = [...new Set(ballots.map(d => d.data().email).filter(Boolean))];
-  newsletterEmails = [...new Set(ballots.map(d => d.data()).filter(b => b.newsletter === true && b.email).map(b => b.email))];
   const n = ballots.length;
   countEl.textContent = `${n} vote${n > 1 ? 's' : ''} capturé${n > 1 ? 's' : ''} sur ${snap.size} reçu${snap.size > 1 ? 's' : ''}`
     + (window ? ` (créneau ${fmtTime(window.start)} – ${fmtTime(window.end)})` : '')
     + (suspects.length ? ` · ${suspects.length} suspect${suspects.length > 1 ? 's' : ''} écarté${suspects.length > 1 ? 's' : ''}` : '')
-    + ` · ${emails.length} adresse${emails.length > 1 ? 's' : ''} pour le tirage · ${newsletterEmails.length} newsletter`;
+    + ` · ${emails.length} adresse${emails.length > 1 ? 's' : ''}`;
   if (!snap.size) {
     statusEl.textContent = 'Aucun vote reçu pour ce match.';
   } else if (!n && !inTime.length) {
@@ -173,11 +170,11 @@ async function tally() {
       + 'Vérifiez l\'heure du match : le créneau sert à écarter les votes faits hors du match.';
   }
   drawEl.hidden = !emails.length;
-  // Adresses des inscrits à la newsletter, une par ligne, prêtes à copier
-  newsletterEl.hidden = !newsletterEmails.length;
-  newsletterTitleEl.textContent = `Adresses newsletter (${newsletterEmails.length})`;
-  newsletterListEl.value = newsletterEmails.join('\n');
-  newsletterListEl.rows = Math.min(20, Math.max(6, newsletterEmails.length + 1));
+  // Toutes les adresses laissées, une par ligne, prêtes à copier
+  newsletterEl.hidden = !emails.length;
+  newsletterTitleEl.textContent = `Adresses e-mail (${emails.length})`;
+  newsletterListEl.value = emails.join('\n');
+  newsletterListEl.rows = Math.min(20, Math.max(6, emails.length + 1));
   drawResultEl.textContent = '';
   tableEl.innerHTML = `
     <table>
@@ -207,7 +204,7 @@ signinEl.addEventListener('click', async () => {
 signoutEl.addEventListener('click', async () => {
   await signOut(auth);
   // Retour à l'état initial : plus de match, plus de tableau, plus d'adresses en mémoire.
-  matches = []; emails = []; newsletterEmails = [];
+  matches = []; emails = [];
   matchEl.innerHTML = ''; tableEl.innerHTML = ''; countEl.textContent = ''; drawResultEl.textContent = '';
   matchEl.hidden = refreshEl.hidden = windowEl.hidden = tabsEl.hidden = newsletterEl.hidden = drawEl.hidden = true;
   suspectsEl.innerHTML = '';
@@ -231,7 +228,7 @@ copyNewsletterEl.addEventListener('click', async () => {
   copyNewsletterEl.textContent = 'Copié !';
   setTimeout(() => { copyNewsletterEl.textContent = 'Copier'; }, 1500);
 });
-// Tirage au sort parmi toutes les adresses laissées (newsletter cochée ou non), une chance par adresse.
+// Tirage au sort parmi toutes les adresses laissées, une chance par adresse.
 drawEl.addEventListener('click', () => {
   const winner = emails[Math.floor(Math.random() * emails.length)];
   drawResultEl.textContent = winner ? `Gagnant : ${winner}` : '';

@@ -3,8 +3,7 @@
 //   ?m=<id du match>&a=<code équipe A>&b=<code équipe B>&pa=<joueurs A>&pb=<joueurs B>
 //   joueurs : liste "code:numéro:rôle" séparée par des virgules, code = prénom + nom comme dans joueurs.json.
 // Les votes sont écrits dans Firestore : matches/<id>/ballots/<empreinte d'appareil>, donc un seul bulletin par téléphone
-// et par match (vérifié par firestore.rules). L'adresse e-mail est facultative : elle sert au tirage au sort de places,
-// et à la newsletter si la case est cochée (champ newsletter: true dans le bulletin).
+// et par match (vérifié par firestore.rules). L'adresse e-mail est facultative : elle sert au tirage au sort de places.
 import {initializeApp} from 'https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js';
 import {getFirestore, doc, setDoc, serverTimestamp} from 'https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js';
 import {firebaseConfig} from './firebase-config.js';
@@ -38,7 +37,6 @@ const teamsEl = $('#teams');
 const submitEl = $('#submit');
 const statusEl = $('#status');
 const emailEl = $('#email');
-const newsletterEl = $('#newsletter');
 const footerEl = $('#footer');
 const EMAIL_RE = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
 
@@ -228,20 +226,15 @@ function updateSelection() {
     el.querySelector('.pick-name').textContent = pick ? displayName(pick.code) : '—';
   });
   const email = normalizedEmail();
-  const newsletter = newsletterEl.checked;
   const emailOk = email === '' || EMAIL_RE.test(email);
-  // la newsletter demande une adresse : sans adresse, la case ne peut pas être prise en compte
-  const newsletterOk = !newsletter || email !== '';
-  emailEl.classList.toggle('invalid', !emailOk || !newsletterOk);
-  submitEl.disabled = picks.length !== 3 || !emailOk || !newsletterOk;
+  emailEl.classList.toggle('invalid', !emailOk);
+  submitEl.disabled = picks.length !== 3 || !emailOk;
   statusEl.classList.remove('error');
   // pas de compteur de choix : le bouton grisé et les trois cadres suffisent
   if (picks.length < 3) {
     statusEl.textContent = '';
   } else if (!emailOk) {
     statusEl.textContent = 'Adresse e-mail incomplète';
-  } else if (!newsletterOk) {
-    statusEl.textContent = 'Indiquez votre e-mail pour la newsletter';
   } else {
     statusEl.textContent = '';
   }
@@ -356,8 +349,7 @@ function showDone() {
 
 async function submit() {
   const email = normalizedEmail();
-  const newsletter = newsletterEl.checked && email !== '';
-  if (picks.length !== 3 || (email && !EMAIL_RE.test(email)) || (newsletterEl.checked && !email)) return;
+  if (picks.length !== 3 || (email && !EMAIL_RE.test(email))) return;
   submitEl.disabled = true;
   statusEl.textContent = 'Envoi…';
   statusEl.classList.remove('error');
@@ -372,7 +364,6 @@ async function submit() {
       device, first, second, third,
       ...(sig ? {sig, agent} : {}),
       ...(email ? {email} : {}),
-      ...(newsletter ? {newsletter: true} : {}),
       createdAt: serverTimestamp(),
     });
     if (email) { try { localStorage.setItem('vote-etoiles:email', email); } catch { /* ignore */ } }
@@ -422,7 +413,6 @@ async function main() {
   render();
   try { emailEl.value = localStorage.getItem('vote-etoiles:email') || ''; } catch { /* ignore */ }
   emailEl.addEventListener('input', updateSelection);
-  newsletterEl.addEventListener('change', updateSelection);
   submitEl.addEventListener('click', submit);
   updateSelection();
   fitFooter();

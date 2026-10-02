@@ -227,27 +227,6 @@ html, body {
 }
 .email-field input:focus { border-color: var(--gold); }
 .email-field input.invalid { border-color: #ff6b6b; }
-.newsletter-field {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  width: 100%;
-  max-width: 528px;
-  margin: 0 auto 10px;
-  padding: 0 4px;
-  text-align: left;
-  font-size: 0.72rem;
-  font-weight: 600;
-  cursor: pointer;
-}
-.newsletter-field input {
-  flex: 0 0 auto;
-  width: 18px;
-  height: 18px;
-  margin: 0;
-  accent-color: var(--gold);
-  cursor: pointer;
-}
 
 .submit {
   width: 100%;
