@@ -11,6 +11,7 @@ import { HttpClient } from '@angular/common/http';
 
 import { PageNotFoundComponent} from "./app/components";
 import {HashLocationStrategy, LocationStrategy} from "@angular/common";
+import {resetStorageOnVersionChange} from './app/services/storage-version';
 
 // AoT requires an exported function for factories
 export function httpLoaderFactory(http: HttpClient): TranslateHttpLoader {
@@ -20,6 +21,8 @@ export function httpLoaderFactory(http: HttpClient): TranslateHttpLoader {
 if (APP_CONFIG.production) {
   enableProdMode();
 }
+
+resetStorageOnVersionChange();
 
 bootstrapApplication(AppComponent, {
   providers: [

@@ -40,8 +40,9 @@ export class GameData {
     return this;
   }
 
+  /** Option masquée pour l'instant : le projecteur est toujours considéré au sol (voir match-parameters). */
   get projectionMode(): ProjectionMode {
-    return this._dto.projectionMode || ProjectionMode.NORMAL;
+    return ProjectionMode.PUSHED_ON_TOP;
   }
 
   set projectionMode(value: ProjectionMode) {

@@ -67,7 +67,7 @@ export class ImproDataService {
           break;
         }
         case StorageKey.ANTHEM.toString(): {
-          const line = JSON.parse(event.newValue || '') as string;
+          const line = JSON.parse(event.newValue || '""') as string;
           this.anthemLine.set(line);
           break;
         }

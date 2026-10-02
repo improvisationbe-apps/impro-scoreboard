@@ -22,6 +22,8 @@ import {GameData} from "@models/game-data";
 export class MatchParametersComponent {
   protected readonly ProjectionModeLabel = ProjectionModeLabel;
   ProjectionMode = ProjectionMode;
+  /** Masqué pour l'instant : le projecteur est toujours considéré au sol (GameData.projectionMode). */
+  protected readonly showProjectionModeOption = false;
 
   gameData = this._improDataService.gameData;
 
