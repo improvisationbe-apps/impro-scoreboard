@@ -46,7 +46,7 @@ Contournable en vidant le stockage du navigateur : c'est un frein aux doublons, 
 adresse IP demanderait un serveur, donc la formule payante Firebase.
 
 Le votant peut laisser son adresse e-mail (facultatif) pour « tenter de gagner 2 places pour un prochain match ».
-La page de résultats ne compte que les votes reçus dans un créneau horaire, réglable, par défaut de 20 h le jour du
+La page de résultats ne compte que les votes reçus dans un créneau horaire, réglable sur plusieurs jours (date et heure de début et de fin), prérempli de 20 h le jour du
 match (date dans l'identifiant du match) à minuit : les bulletins de test de l'après-midi sont ignorés. Elle affiche
 le top 8, écarte les votes suspects (même signature technique du navigateur et même 1re étoile à moins d'une minute
 d'intervalle ; le premier compte, les suivants sont listés dans un onglet dédié, rien n'est supprimé), compte les adresses, les copie dans le
