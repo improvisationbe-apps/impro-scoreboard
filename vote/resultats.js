@@ -14,7 +14,7 @@ const auth = getAuth(app);
 
 const $ = (sel) => document.querySelector(sel);
 const signinEl = $('#signin'), signoutEl = $('#signout'), matchEl = $('#match'), refreshEl = $('#refresh'), countEl = $('#count'), statusEl = $('#status'), tableEl = $('#table');
-const windowEl = $('#window'), fromEl = $('#from'), toEl = $('#to');
+const windowEl = $('#window'), dayEl = $('#day'), fromEl = $('#from'), toEl = $('#to');
 const tabsEl = $('#tabs'), suspectsEl = $('#suspects'), tabSuspectsEl = $('#tab-suspects');
 const drawEl = $('#draw'), drawResultEl = $('#draw-result');
 const newsletterEl = $('#newsletter'), newsletterTitleEl = $('#newsletter-title'), newsletterListEl = $('#newsletter-list'), copyNewsletterEl = $('#copy-newsletter');
@@ -40,16 +40,16 @@ function displayName(code) {
   return [p.prenom, p.alias ? `« ${p.alias} »` : '', p.nom].filter(Boolean).join(' ') || code;
 }
 
-/** Jour du match, minuit heure locale, tiré de l'identifiant ("2026-09-17-aigles-requins") ; null si absent. */
-function matchDay(matchId) {
-  const m = /^(\d{4})-(\d{2})-(\d{2})/.exec(matchId);
-  return m ? new Date(Number(m[1]), Number(m[2]) - 1, Number(m[3])) : null;
+/** Préremplit le jour du filtre avec celui de l'identifiant du match ("2026-09-17-aigles-requins") ; vide si absent. */
+function resetDay(matchId) {
+  dayEl.value = /^\d{4}-\d{2}-\d{2}/.exec(matchId || '')?.[0] || '';
 }
 
-/** Créneau [début, fin) des votes retenus, d'après les deux heures saisies. Fin ≤ début : la fin est le lendemain. */
-function voteWindow(matchId) {
-  const day = matchDay(matchId);
-  if (!day) return null;
+/** Créneau [début, fin) des votes retenus, d'après le jour et les deux heures saisis. Fin ≤ début : la fin est le lendemain. */
+function voteWindow() {
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(dayEl.value);
+  if (!m) return null;
+  const day = new Date(Number(m[1]), Number(m[2]) - 1, Number(m[3]));
   const at = (time) => {
     const [h, min] = (time || '00:00').split(':').map(Number);
     return new Date(day.getFullYear(), day.getMonth(), day.getDate(), h, min);
@@ -122,7 +122,7 @@ async function loadMatches() {
   matchEl.innerHTML = matches.map(m => `<option value="${m.id}">${m.id}</option>`).join('');
   matchEl.hidden = refreshEl.hidden = windowEl.hidden = tabsEl.hidden = !matches.length;
   if (!matches.length) statusEl.textContent = 'Aucun vote enregistré pour le moment.';
-  else await tally();
+  else { resetDay(matchEl.value); await tally(); }
 }
 
 async function tally() {
@@ -131,7 +131,7 @@ async function tally() {
   statusEl.textContent = 'Dépouillement…';
   const snap = await getDocs(collection(db, 'matches', match.id, 'ballots'));
   // Créneau horaire : les bulletins hors créneau (tests, retardataires) sont ignorés.
-  const window = voteWindow(match.id);
+  const window = voteWindow();
   const inWindow = (d) => {
     if (!window) return true;
     const t = d.data().createdAt?.toDate?.();
@@ -212,7 +212,8 @@ signoutEl.addEventListener('click', async () => {
   statusEl.textContent = 'Déconnecté.';
   statusEl.classList.remove('error');
 });
-matchEl.addEventListener('change', tally);
+matchEl.addEventListener('change', () => { resetDay(matchEl.value); tally().catch(showError); });
+dayEl.addEventListener('change', () => tally().catch(showError));
 fromEl.addEventListener('change', () => tally().catch(showError));
 toEl.addEventListener('change', () => tally().catch(showError));
 tabsEl.addEventListener('click', (e) => {

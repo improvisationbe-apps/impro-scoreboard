@@ -55,7 +55,8 @@
       <button id="signin" class="primary">Se connecter avec Google</button>
       <select id="match" hidden></select>
       <label id="window" class="window" hidden>
-        <span>Votes de</span> <input id="from" type="time" value="20:00">
+        <span>Votes du</span> <input id="day" type="date">
+        <span>de</span> <input id="from" type="time" value="20:00">
         <span>à</span> <input id="to" type="time" value="00:00">
       </label>
       <button id="refresh" hidden>Actualiser</button>
@@ -78,7 +79,7 @@
       </div>
       <textarea id="newsletter-list" class="newsletter-list" readonly spellcheck="false"></textarea>
     </section>
-    <p class="hint">Seuls les votes reçus dans le créneau sont comptés, par défaut de 20 h le jour du match à minuit. Le jour du match vient de l'identifiant (ex. 2026-09-17-aigles-requins) ; une heure de fin inférieure ou égale à l'heure de début passe au lendemain.</p>
+    <p class="hint">Seuls les votes reçus dans le créneau sont comptés, par défaut de 20 h le jour du match à minuit. Le jour est prérempli d'après l'identifiant du match (ex. 2026-09-17-aigles-requins) et peut être changé ; sans jour, tous les votes sont comptés ; une heure de fin inférieure ou égale à l'heure de début passe au lendemain.</p>
     <p class="hint">Votes suspects : même appareil probable (signature technique du navigateur : système, écran, modèle Android…) et même 1<sup>re</sup> étoile à moins d'une minute d'intervalle. Le premier est gardé, les suivants sont écartés du classement, du tirage et de la liste d'adresses, et listés dans l'onglet « Votes suspects ». La signature n'est pas unique : des téléphones identiques la partagent, d'où l'intérêt de jeter un œil à l'onglet.</p>
     <p class="hint">Top 8. Barème : 3 points pour une 1<sup>re</sup> étoile, 2 pour une 2<sup>e</sup>, 1 pour une 3<sup>e</sup>. Les égalités sont départagées au nombre de 1<sup>res</sup> étoiles, puis de 2<sup>es</sup>.</p>
   </main>
