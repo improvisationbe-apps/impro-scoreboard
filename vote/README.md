@@ -36,7 +36,7 @@ Joueur de la ligue : jusqu'à 6 photos (t-shirt fight, photo par défaut ; t-shi
 ligue : une seule photo, enregistrée en `-tshirt-fight` (suffixe des équipes internationales). Case « Détourer » par photo.
 
 « Enregistrer » dépose une demande dans Firestore (`playerRequests`, photos découpées en morceaux de 900 Ko). Le
-workflow `.github/workflows/joueurs.yml` passe toutes les 10 minutes : `scripts/player-requests.js` applique les
+workflow `.github/workflows/joueurs.yml` passe toutes les 5 minutes : `scripts/player-requests.js` applique les
 demandes (joueurs.json, photos, `scripts/cutout-queue.json`), puis détourage, cadrage des visages, manifeste, commit
 sur `main`, suppression des demandes et redéploiement du vote. Une demande invalide reste affichée sur la page avec
 le motif du refus.

@@ -197,7 +197,7 @@ async function save() {
       player,
       photos: photoList,
     });
-    setStatus(`Demande envoyée : ${escapeHtml(fullName(player))}. En ligne dans 10 à 20 minutes environ.`);
+    setStatus(`Demande envoyée : ${escapeHtml(fullName(player))}. En ligne dans 5 à 15 minutes environ.`);
     pending = new Map();
     renderSlots();
     updateDirty();
