@@ -1,0 +1,86 @@
+# Admin joueurs : applique les demandes déposées par vote/admin.html (Firestore playerRequests), puis traite les photos
+# (détourage en attente, cadrage des visages, manifeste), commit sur main et redéploie la page de vote.
+# Tourne aussi quand des photos sont poussées à la main. macOS : les scripts de photos utilisent le framework Vision.
+name: 'Joueurs : demandes et photos'
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'
+  push:
+    branches: [main]
+    paths:
+      - 'src/assets/joueurs/**'
+      - 'scripts/cutout-queue.json'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: joueurs
+  cancel-in-progress: false
+
+env:
+  FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+  NODE_PATH: ${{ github.workspace }}/scripts/.cache/fb/node_modules
+
+jobs:
+  # Vérification légère (Linux) : le job macOS ne démarre que s'il y a quelque chose à faire.
+  check:
+    runs-on: ubuntu-latest
+    outputs:
+      pending: ${{ steps.count.outputs.pending }}
+    steps:
+      - uses: actions/checkout@v4
+      - run: npm install --prefix scripts/.cache/fb firebase-admin --no-audit --no-fund
+      - id: count
+        run: node scripts/player-requests.js count
+
+  process:
+    needs: check
+    if: needs.check.outputs.pending != '0' || github.event_name != 'schedule'
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: npm install --prefix scripts/.cache/fb firebase-admin --no-audit --no-fund
+      - name: Demandes de la page admin
+        run: node scripts/player-requests.js apply
+      - name: Détourage des photos en attente
+        run: |
+          node -e "for (const f of require('./scripts/cutout-queue.json')) console.log(f)" > scripts/.cache/queue.txt
+          if [ -s scripts/.cache/queue.txt ]; then
+            swiftc -O -o scripts/.cache/cutout scripts/cutout.swift
+            while read -r f; do
+              echo "Détourage : $f"
+              scripts/.cache/cutout "src/assets/joueurs/$f" || echo "::warning::Détourage impossible : $f"
+            done < scripts/.cache/queue.txt
+          fi
+          echo '[]' > scripts/cutout-queue.json
+      - name: Cadrage des visages
+        run: |
+          swiftc -O -o scripts/.cache/detect-faces scripts/detect-faces.swift
+          scripts/.cache/detect-faces
+      - name: Manifeste des photos
+        run: node scripts/photos-manifest.js
+      - name: Commit
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add src/assets/joueurs src/assets/data/joueurs.json src/assets/data/face-positions.json src/assets/data/photos.json scripts/cutout-queue.json
+          if git diff --cached --quiet; then
+            echo 'Rien à commiter.'
+          else
+            names=$(node -e "const a=require('./scripts/.cache/player-requests-applied.json'); console.log(a.map(r => r.name + ' (' + r.by + ')').join(', '))")
+            git commit -m "Joueurs : ${names:-photos traitées}" -m 'Automatique : page admin (vote/admin.html), détourage, visages, manifeste.'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+      # Après le push seulement : en cas d'échec, les demandes restent et sont rejouées au passage suivant.
+      - name: Suppression des demandes appliquées
+        run: node scripts/player-requests.js done
+      # Un push fait avec GITHUB_TOKEN ne déclenche pas d'autre workflow : on relance le déploiement du vote.
+      - name: Redéploiement du vote
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run vote-pages.yml --ref main

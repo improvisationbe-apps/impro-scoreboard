@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Admin joueurs · improvisation.be</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vote.css">
+  <style>
+    .admin { max-width: 760px; margin: 0 auto; padding: 24px 16px 60px; }
+    .toolbar { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin: 16px 0; }
+    .admin input[type=text], .admin input[type=password], .admin select {
+      font: inherit; padding: 10px 14px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.2);
+      background: var(--card); color: var(--fg); box-sizing: border-box; min-width: 0;
+    }
+    .admin input[readonly] { color: var(--muted); }
+    .admin button { font: inherit; padding: 10px 14px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.2); background: var(--card); color: var(--fg); cursor: pointer; font-weight: 700; }
+    .admin button.primary { background: var(--gold); color: #000; border-color: var(--gold); }
+    .admin button:disabled { opacity: 0.5; cursor: default; }
+    .toolbar .ms-auto { margin-left: auto; }
+    .grow { flex: 1; }
+    .fields { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin: 18px 0; }
+    .field { display: flex; flex-direction: column; gap: 6px; font-size: 0.8rem; color: var(--muted); }
+    .field.check { flex-direction: row; align-items: center; gap: 8px; font-size: 0.95rem; color: var(--fg); }
+    .kind { display: flex; gap: 18px; flex-wrap: wrap; margin: 6px 0 18px; }
+    .kind label { display: flex; align-items: center; gap: 8px; cursor: pointer; }
+    .section-title { font-size: 1rem; font-weight: 800; margin: 24px 0 4px; text-transform: uppercase; letter-spacing: 0.04em; }
+    .slots { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; margin-top: 12px; }
+    .slot { background: var(--card); border-radius: 12px; padding: 10px; display: flex; flex-direction: column; gap: 8px; }
+    .slot-title { font-weight: 800; }
+    .slot-hint { font-size: 0.75rem; color: var(--muted); }
+    .slot-preview { aspect-ratio: 2 / 3; border-radius: 8px; background: #222 center / cover no-repeat; display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 0.8rem; overflow: hidden; }
+    .slot-preview img { width: 100%; height: 100%; object-fit: cover; }
+    .slot.changed { outline: 2px solid var(--gold); }
+    .slot input[type=file] { font-size: 0.75rem; color: var(--muted); max-width: 100%; }
+    .slot label { display: flex; align-items: center; gap: 6px; font-size: 0.8rem; }
+    .badge { font-size: 0.7rem; color: var(--gold); }
+    .request { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .request .grow { min-width: 200px; }
+    .request .error { color: #ff6b6b; }
+    .hint { color: var(--muted); font-size: 0.85rem; }
+    .hint a, .status a { color: var(--gold); }
+  </style>
+</head>
+<body>
+  <main class="admin">
+    <header class="header">
+      <img src="logo.svg" alt="improvisation.be" class="logo">
+      <h1 class="title">Admin<br>joueurs</h1>
+      <p class="subtitle">Réservé à l'organisation.</p>
+    </header>
+
+    <div class="toolbar">
+      <button id="signin" class="primary">Se connecter avec Google</button>
+      <span id="who" class="hint"></span>
+      <button id="signout" class="ms-auto" hidden>Se déconnecter</button>
+    </div>
+
+    <div id="editor" hidden>
+      <div class="toolbar">
+        <select id="player" class="grow"></select>
+      </div>
+
+      <div class="fields">
+        <label class="field">Prénom *<input id="prenom" type="text" required></label>
+        <label class="field">Nom<input id="nom" type="text"></label>
+        <label class="field">Alias<input id="alias" type="text"></label>
+        <label class="field">Nom court<input id="shortName" type="text"></label>
+        <label class="field">Nom des fichiers photo<input id="img" type="text" spellcheck="false"></label>
+        <label class="field check"><input id="femme" type="checkbox"> Femme</label>
+      </div>
+
+      <div class="kind">
+        <label><input type="radio" name="kind" value="ligue" checked> Joueur de la ligue (6 photos)</label>
+        <label><input type="radio" name="kind" value="hors"> Joueur hors ligue (1 photo)</label>
+      </div>
+
+      <h2 class="section-title">Photos</h2>
+      <p class="hint">Choisir un fichier remplace la photo existante. « Détourer » enlève le fond automatiquement (réglages par défaut) ; si le résultat ne va pas, détourer en local avec <code>npm run photos:cutout</code> et renvoyer le PNG.</p>
+      <div id="slots" class="slots"></div>
+
+      <div class="toolbar">
+        <button id="save" class="primary" type="button">Enregistrer</button>
+        <span id="dirty" class="hint"></span>
+      </div>
+    </div>
+
+    <p id="status" class="status"></p>
+
+    <section id="requests-section" hidden>
+      <h2 class="section-title">Demandes en cours</h2>
+      <div id="requests"></div>
+    </section>
+
+    <p class="hint">« Enregistrer » dépose une demande. Un robot passe toutes les 10 minutes environ : il l'ajoute au dépôt (joueurs.json et photos), traite les photos (détourage demandé, cadrage des visages) et met à jour la page de vote, qui affiche les changements 10 à 20 minutes après l'envoi. L'app Electron les reprend au prochain build.</p>
+    <p class="hint">Accès : adresses Google de la liste des organisateurs (<code>firestore.rules</code>).</p>
+  </main>
+  <script type="module" src="admin.js"></script>
+</body>
+</html>
