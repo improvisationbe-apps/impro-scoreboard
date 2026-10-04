@@ -8,6 +8,7 @@ reste hors ligne, seule la page de vote a besoin d'internet.
 
 - `index.html`, `vote.js`, `vote.css` : la page de vote (trois étoiles classées, 3-2-1 points).
 - `resultats.html`, `resultats.js` : dépouillement, réservé à l'organisation (connexion Google).
+- `admin.html`, `admin.js` : ajout et modification des joueurs (fiche + photos), réservé à l'organisation (connexion Google).
 - `firebase-config.js` : configuration du projet Firebase, à renseigner (voir plus bas).
 - `firestore.rules` : règles de sécurité Firestore, à coller dans la console Firebase.
 - `data/`, `photos/` et `layout/` : générés par `npm run vote:build` (copie de `joueurs.json`, `equipes.json`, `face-positions.json`, vignettes 720 px
@@ -27,6 +28,22 @@ reste hors ligne, seule la page de vote a besoin d'internet.
 
 L'adresse de la page est `https://improvisationbe-apps.github.io/impro-scoreboard/` (constante `VOTE_BASE_URL`
 dans `src/app/constants/vote.constants.ts`).
+
+## Admin joueurs
+
+`admin.html` : un organisateur (liste `isOrganizer` de `firestore.rules`) ajoute ou modifie un joueur, sans compte GitHub.
+Joueur de la ligue : jusqu'à 6 photos (t-shirt fight, photo par défaut ; t-shirt happy ; une par équipe). Joueur hors
+ligue : une seule photo, enregistrée en `-tshirt-fight` (suffixe des équipes internationales). Case « Détourer » par photo.
+
+« Enregistrer » dépose une demande dans Firestore (`playerRequests`, photos découpées en morceaux de 900 Ko). Le
+workflow `.github/workflows/joueurs.yml` passe toutes les 10 minutes : `scripts/player-requests.js` applique les
+demandes (joueurs.json, photos, `scripts/cutout-queue.json`), puis détourage, cadrage des visages, manifeste, commit
+sur `main`, suppression des demandes et redéploiement du vote. Une demande invalide reste affichée sur la page avec
+le motif du refus.
+
+Mise en place : *Paramètres du projet > Comptes de service > Générer une nouvelle clé privée* dans la console
+Firebase, puis coller le JSON dans le secret `FIREBASE_SERVICE_ACCOUNT` du dépôt GitHub (*Settings > Secrets and
+variables > Actions*). Recoller `firestore.rules` dans la console après chaque modification des règles.
 
 ## Le soir du match
 
