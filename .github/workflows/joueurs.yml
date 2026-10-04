@@ -60,7 +60,8 @@ jobs:
       - name: Cadrage des visages
         run: |
           swiftc -O -o scripts/.cache/detect-faces scripts/detect-faces.swift
-          scripts/.cache/detect-faces
+          # Chemin absolu : le script retrouve le dépôt à partir de son propre chemin d'appel.
+          "$PWD/scripts/.cache/detect-faces"
       - name: Manifeste des photos
         run: node scripts/photos-manifest.js
       - name: Commit
