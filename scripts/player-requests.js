@@ -12,7 +12,8 @@
  */
 const fs = require('fs');
 const path = require('path');
-const admin = require('firebase-admin');
+const {initializeApp, cert} = require('firebase-admin/app');
+const {getFirestore} = require('firebase-admin/firestore');
 
 const ROOT = path.join(__dirname, '..');
 const PLAYERS = path.join(ROOT, 'src', 'assets', 'data', 'joueurs.json');
@@ -24,8 +25,8 @@ const EXTENSIONS = ['png', 'webp', 'avif', 'jpg', 'jpeg', 'gif'];
 const SUFFIXES = ['-tshirt-fight', '-tshirt-happy', '-aigles', '-lions', '-pythons', '-requins'];
 const FIELDS = ['prenom', 'nom', 'alias', 'shortName', 'img', 'femme'];
 
-admin.initializeApp({credential: admin.credential.cert(JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT || '{}'))});
-const db = admin.firestore();
+initializeApp({credential: cert(JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT || '{}'))});
+const db = getFirestore();
 
 /** Demandes en attente, les plus anciennes d'abord (tri en mémoire : pas d'index composite à créer). */
 async function pendingRequests() {
