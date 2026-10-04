@@ -82,7 +82,10 @@ function photoSrc(code, teamCode) {
   const p = playerMeta(code);
   if (!p?.img) return null;
   const stem = p.img.substring(p.img.lastIndexOf('/') + 1);
-  return meta.photos[`${stem}-${teamCode}`] || meta.photos[stem] || null;
+  // Suffixe de l'équipe (equipes.json) : les équipes « couleurs » reprennent les photos des animaux, les
+  // internationales la photo t-shirt fight. À défaut, la photo t-shirt fight (photo par défaut), puis la photo de base.
+  const suffix = meta.teams[teamCode]?.playerImgSuffix ?? `-${teamCode}`;
+  return meta.photos[stem + suffix] || meta.photos[`${stem}-tshirt-fight`] || meta.photos[stem] || null;
 }
 
 /**
