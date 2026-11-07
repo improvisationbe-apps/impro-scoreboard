@@ -59,6 +59,10 @@
     "x" : 47,
     "y" : 27
   },
+  "assets/joueurs/alexis-lions" : {
+    "x" : 51,
+    "y" : 36
+  },
   "assets/joueurs/arnaud" : {
     "x" : 39,
     "y" : 21
@@ -88,8 +92,8 @@
     "y" : 23
   },
   "assets/joueurs/aurore-lions" : {
-    "x" : 47,
-    "y" : 23
+    "x" : 44,
+    "y" : 37
   },
   "assets/joueurs/aurore-pythons" : {
     "x" : 47,
@@ -98,6 +102,10 @@
   "assets/joueurs/aurore-requins" : {
     "x" : 47,
     "y" : 23
+  },
+  "assets/joueurs/aurore-tshirt-fight" : {
+    "x" : 45,
+    "y" : 34
   },
   "assets/joueurs/aurore-tshirt-happy" : {
     "x" : 45,
@@ -112,8 +120,8 @@
     "y" : 37
   },
   "assets/joueurs/cath-aigles" : {
-    "x" : 47,
-    "y" : 24
+    "x" : 53,
+    "y" : 37
   },
   "assets/joueurs/cath-lions" : {
     "x" : 47,
@@ -252,8 +260,8 @@
     "y" : 26
   },
   "assets/joueurs/filou-lions" : {
-    "x" : 37,
-    "y" : 26
+    "x" : 48,
+    "y" : 35
   },
   "assets/joueurs/filou-pythons" : {
     "x" : 37,
@@ -323,6 +331,10 @@
     "x" : 45,
     "y" : 22
   },
+  "assets/joueurs/lenny-b-conil-tshirt-happy" : {
+    "x" : 50,
+    "y" : 38
+  },
   "assets/joueurs/mailis-aigles" : {
     "x" : 44,
     "y" : 21
@@ -368,8 +380,8 @@
     "y" : 25
   },
   "assets/joueurs/nicolas-aigles" : {
-    "x" : 59,
-    "y" : 25
+    "x" : 52,
+    "y" : 34
   },
   "assets/joueurs/nicolas-lions" : {
     "x" : 58,
@@ -472,8 +484,8 @@
     "y" : 35
   },
   "assets/joueurs/sbu-lions" : {
-    "x" : 51,
-    "y" : 36
+    "x" : 43,
+    "y" : 32
   },
   "assets/joueurs/sbu-pythons" : {
     "x" : 51,
@@ -546,6 +558,10 @@
   "assets/joueurs/wilhem-requins" : {
     "x" : 41,
     "y" : 41
+  },
+  "assets/joueurs/zoe-tshirt-happy" : {
+    "x" : 53,
+    "y" : 36
   },
   "assets/joueurs/émilie-marlière" : {
     "x" : 47,
