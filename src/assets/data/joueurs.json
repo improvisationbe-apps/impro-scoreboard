@@ -166,5 +166,14 @@
     "prenom": "Marie-Eve",
     "img": "assets/joueurs/marie-eve",
     "femme": true
+  },
+  {
+    "prenom": "Zoé",
+    "img": "assets/joueurs/zoe",
+    "femme": true
+  },
+  {
+    "prenom": "Alexis",
+    "img": "assets/joueurs/alexis"
   }
 ]
