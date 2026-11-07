@@ -423,6 +423,10 @@
     "x" : 53,
     "y" : 28
   },
+  "assets/joueurs/philippe-verbeke-tshirt-fight" : {
+    "x" : 53,
+    "y" : 36
+  },
   "assets/joueurs/polo-aigles" : {
     "x" : 54,
     "y" : 15
@@ -478,6 +482,10 @@
   "assets/joueurs/sbu-requins" : {
     "x" : 51,
     "y" : 36
+  },
+  "assets/joueurs/sbu-tshirt-fight" : {
+    "x" : 43,
+    "y" : 32
   },
   "assets/joueurs/sophie-hoyas" : {
     "x" : 54,
