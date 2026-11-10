@@ -1,107 +1,27 @@
 {
-  "assets/joueurs/alain" : {
-    "x" : 44,
-    "y" : 24
-  },
-  "assets/joueurs/alain-aigles" : {
-    "x" : 44,
-    "y" : 24
-  },
-  "assets/joueurs/alain-lions" : {
-    "x" : 44,
-    "y" : 24
-  },
-  "assets/joueurs/alain-pythons" : {
-    "x" : 44,
-    "y" : 24
-  },
   "assets/joueurs/alain-requins" : {
     "x" : 47,
     "y" : 38
-  },
-  "assets/joueurs/alex-colusi" : {
-    "x" : 44,
-    "y" : 26
   },
   "assets/joueurs/alex-colusi-aigles" : {
     "x" : 46,
     "y" : 35
   },
-  "assets/joueurs/alex-colusi-lions" : {
-    "x" : 44,
-    "y" : 26
-  },
-  "assets/joueurs/alex-colusi-pythons" : {
-    "x" : 44,
-    "y" : 26
-  },
-  "assets/joueurs/alex-colusi-requins" : {
-    "x" : 44,
-    "y" : 25
-  },
-  "assets/joueurs/alexandra-ducoux" : {
-    "x" : 46,
-    "y" : 27
-  },
   "assets/joueurs/alexandra-ducoux-aigles" : {
     "x" : 63,
     "y" : 38
-  },
-  "assets/joueurs/alexandra-ducoux-lions" : {
-    "x" : 47,
-    "y" : 27
-  },
-  "assets/joueurs/alexandra-ducoux-pythons" : {
-    "x" : 46,
-    "y" : 27
-  },
-  "assets/joueurs/alexandra-ducoux-requins" : {
-    "x" : 47,
-    "y" : 27
   },
   "assets/joueurs/alexis-lions" : {
     "x" : 51,
     "y" : 36
   },
-  "assets/joueurs/arnaud" : {
-    "x" : 39,
-    "y" : 21
-  },
   "assets/joueurs/arnaud-aigles" : {
     "x" : 46,
     "y" : 35
   },
-  "assets/joueurs/arnaud-lions" : {
-    "x" : 40,
-    "y" : 21
-  },
-  "assets/joueurs/arnaud-pythons" : {
-    "x" : 39,
-    "y" : 21
-  },
-  "assets/joueurs/arnaud-requins" : {
-    "x" : 39,
-    "y" : 21
-  },
-  "assets/joueurs/aurore" : {
-    "x" : 47,
-    "y" : 23
-  },
-  "assets/joueurs/aurore-aigles" : {
-    "x" : 47,
-    "y" : 23
-  },
   "assets/joueurs/aurore-lions" : {
     "x" : 44,
     "y" : 37
-  },
-  "assets/joueurs/aurore-pythons" : {
-    "x" : 47,
-    "y" : 23
-  },
-  "assets/joueurs/aurore-requins" : {
-    "x" : 47,
-    "y" : 23
   },
   "assets/joueurs/aurore-tshirt-fight" : {
     "x" : 45,
@@ -111,10 +31,6 @@
     "x" : 45,
     "y" : 36
   },
-  "assets/joueurs/cath" : {
-    "x" : 47,
-    "y" : 24
-  },
   "assets/joueurs/cath-aigle" : {
     "x" : 53,
     "y" : 37
@@ -123,81 +39,21 @@
     "x" : 53,
     "y" : 37
   },
-  "assets/joueurs/cath-lions" : {
-    "x" : 47,
-    "y" : 24
-  },
-  "assets/joueurs/cath-pythons" : {
-    "x" : 47,
-    "y" : 24
-  },
-  "assets/joueurs/cath-requins" : {
-    "x" : 47,
-    "y" : 24
-  },
   "assets/joueurs/cath-tshirt-fight" : {
     "x" : 54,
     "y" : 36
-  },
-  "assets/joueurs/charlie-tshirt-fight" : {
-    "x" : 44,
-    "y" : 37
-  },
-  "assets/joueurs/charlotte-otlet" : {
-    "x" : 48,
-    "y" : 41
-  },
-  "assets/joueurs/charlotte-otlet-aigles" : {
-    "x" : 47,
-    "y" : 41
   },
   "assets/joueurs/charlotte-otlet-lions" : {
     "x" : 48,
     "y" : 35
   },
-  "assets/joueurs/charlotte-otlet-pythons" : {
-    "x" : 48,
-    "y" : 41
-  },
-  "assets/joueurs/charlotte-otlet-requins" : {
-    "x" : 48,
-    "y" : 41
-  },
-  "assets/joueurs/clem-aigles" : {
-    "x" : 51,
-    "y" : 29
-  },
   "assets/joueurs/clem-lions" : {
     "x" : 52,
     "y" : 40
   },
-  "assets/joueurs/clem-pythons" : {
-    "x" : 51,
-    "y" : 29
-  },
-  "assets/joueurs/clem-requins" : {
-    "x" : 51,
-    "y" : 29
-  },
-  "assets/joueurs/david-di-gloria" : {
-    "x" : 36,
-    "y" : 26
-  },
   "assets/joueurs/david-di-gloria-aigles" : {
     "x" : 56,
     "y" : 39
-  },
-  "assets/joueurs/david-di-gloria-lions" : {
-    "x" : 36,
-    "y" : 26
-  },
-  "assets/joueurs/david-di-gloria-pythons" : {
-    "x" : 35,
-    "y" : 26
-  },
-  "assets/joueurs/david-di-gloria-requins" : {
-    "x" : 36,
-    "y" : 26
   },
   "assets/joueurs/david-di-gloria-tshirt-fight" : {
     "x" : 48,
@@ -207,41 +63,9 @@
     "x" : 51,
     "y" : 35
   },
-  "assets/joueurs/dereck-tshirt-fight" : {
-    "x" : 38,
-    "y" : 43
-  },
-  "assets/joueurs/elodie" : {
-    "x" : 45,
-    "y" : 27
-  },
-  "assets/joueurs/elodie-aigles" : {
-    "x" : 45,
-    "y" : 27
-  },
   "assets/joueurs/elodie-lions" : {
     "x" : 45,
     "y" : 35
-  },
-  "assets/joueurs/elodie-pythons" : {
-    "x" : 45,
-    "y" : 27
-  },
-  "assets/joueurs/elodie-requins" : {
-    "x" : 45,
-    "y" : 27
-  },
-  "assets/joueurs/emilie-marliere-aigles" : {
-    "x" : 47,
-    "y" : 27
-  },
-  "assets/joueurs/emilie-marliere-lions" : {
-    "x" : 47,
-    "y" : 27
-  },
-  "assets/joueurs/emilie-marliere-pythons" : {
-    "x" : 47,
-    "y" : 27
   },
   "assets/joueurs/emilie-marliere-requins" : {
     "x" : 52,
@@ -251,41 +75,9 @@
     "x" : 52,
     "y" : 36
   },
-  "assets/joueurs/filou" : {
-    "x" : 37,
-    "y" : 27
-  },
-  "assets/joueurs/filou-aigles" : {
-    "x" : 36,
-    "y" : 26
-  },
   "assets/joueurs/filou-lions" : {
     "x" : 48,
     "y" : 35
-  },
-  "assets/joueurs/filou-pythons" : {
-    "x" : 37,
-    "y" : 26
-  },
-  "assets/joueurs/filou-requins" : {
-    "x" : 37,
-    "y" : 26
-  },
-  "assets/joueurs/gab-de-pat" : {
-    "x" : 47,
-    "y" : 44
-  },
-  "assets/joueurs/gab-de-pat-aigles" : {
-    "x" : 47,
-    "y" : 45
-  },
-  "assets/joueurs/gab-de-pat-lions" : {
-    "x" : 47,
-    "y" : 44
-  },
-  "assets/joueurs/gab-de-pat-pythons" : {
-    "x" : 47,
-    "y" : 44
   },
   "assets/joueurs/gab-de-pat-requins" : {
     "x" : 51,
@@ -295,181 +87,33 @@
     "x" : 54,
     "y" : 35
   },
-  "assets/joueurs/hugues-tshirt-fight" : {
-    "x" : 48,
-    "y" : 45
-  },
-  "assets/joueurs/img" : {
-    "x" : 51,
-    "y" : 35
-  },
-  "assets/joueurs/img_1" : {
-    "x" : 46,
-    "y" : 26
-  },
-  "assets/joueurs/jésica" : {
-    "x" : 49,
-    "y" : 20
-  },
-  "assets/joueurs/lenny-b-conil" : {
-    "x" : 45,
-    "y" : 22
-  },
-  "assets/joueurs/lenny-b-conil-aigles" : {
-    "x" : 44,
-    "y" : 22
-  },
   "assets/joueurs/lenny-b-conil-lions" : {
     "x" : 43,
     "y" : 37
-  },
-  "assets/joueurs/lenny-b-conil-pythons" : {
-    "x" : 45,
-    "y" : 22
-  },
-  "assets/joueurs/lenny-b-conil-requins" : {
-    "x" : 45,
-    "y" : 22
   },
   "assets/joueurs/lenny-b-conil-tshirt-happy" : {
     "x" : 50,
     "y" : 38
   },
-  "assets/joueurs/mailis-aigles" : {
-    "x" : 44,
-    "y" : 21
-  },
-  "assets/joueurs/mailis-lions" : {
-    "x" : 44,
-    "y" : 21
-  },
-  "assets/joueurs/mailis-pythons" : {
-    "x" : 45,
-    "y" : 21
-  },
   "assets/joueurs/mailis-requins" : {
     "x" : 54,
     "y" : 37
-  },
-  "assets/joueurs/marie-eve-tshirt-fight" : {
-    "x" : 52,
-    "y" : 40
-  },
-  "assets/joueurs/maïlis" : {
-    "x" : 45,
-    "y" : 21
-  },
-  "assets/joueurs/mp-aigles" : {
-    "x" : 48,
-    "y" : 32
-  },
-  "assets/joueurs/mp-lions" : {
-    "x" : 48,
-    "y" : 32
-  },
-  "assets/joueurs/mp-pythons" : {
-    "x" : 48,
-    "y" : 32
-  },
-  "assets/joueurs/mp-requins" : {
-    "x" : 48,
-    "y" : 32
-  },
-  "assets/joueurs/nicolas" : {
-    "x" : 59,
-    "y" : 25
   },
   "assets/joueurs/nicolas-aigles" : {
     "x" : 52,
     "y" : 34
   },
-  "assets/joueurs/nicolas-lions" : {
-    "x" : 58,
-    "y" : 26
-  },
-  "assets/joueurs/nicolas-pythons" : {
-    "x" : 58,
-    "y" : 25
-  },
-  "assets/joueurs/nicolas-requins" : {
-    "x" : 58,
-    "y" : 26
-  },
-  "assets/joueurs/pec" : {
-    "x" : 42,
-    "y" : 24
-  },
   "assets/joueurs/pec-aigles" : {
     "x" : 51,
     "y" : 40
-  },
-  "assets/joueurs/pec-lions" : {
-    "x" : 42,
-    "y" : 24
-  },
-  "assets/joueurs/pec-pythons" : {
-    "x" : 42,
-    "y" : 24
-  },
-  "assets/joueurs/pec-requins" : {
-    "x" : 42,
-    "y" : 24
-  },
-  "assets/joueurs/philippe-verbeke" : {
-    "x" : 54,
-    "y" : 29
-  },
-  "assets/joueurs/philippe-verbeke-aigles" : {
-    "x" : 53,
-    "y" : 28
-  },
-  "assets/joueurs/philippe-verbeke-lions" : {
-    "x" : 53,
-    "y" : 28
-  },
-  "assets/joueurs/philippe-verbeke-pythons" : {
-    "x" : 53,
-    "y" : 29
-  },
-  "assets/joueurs/philippe-verbeke-requins" : {
-    "x" : 53,
-    "y" : 28
   },
   "assets/joueurs/philippe-verbeke-tshirt-fight" : {
     "x" : 53,
     "y" : 36
   },
-  "assets/joueurs/polo-aigles" : {
-    "x" : 54,
-    "y" : 15
-  },
   "assets/joueurs/polo-lions" : {
     "x" : 47,
     "y" : 37
-  },
-  "assets/joueurs/polo-pythons" : {
-    "x" : 53,
-    "y" : 16
-  },
-  "assets/joueurs/polo-requins" : {
-    "x" : 53,
-    "y" : 16
-  },
-  "assets/joueurs/q" : {
-    "x" : 41,
-    "y" : 24
-  },
-  "assets/joueurs/q-aigles" : {
-    "x" : 41,
-    "y" : 24
-  },
-  "assets/joueurs/q-lions" : {
-    "x" : 42,
-    "y" : 24
-  },
-  "assets/joueurs/q-pythons" : {
-    "x" : 41,
-    "y" : 24
   },
   "assets/joueurs/q-requins" : {
     "x" : 50,
@@ -479,41 +123,13 @@
     "x" : 48,
     "y" : 38
   },
-  "assets/joueurs/sbu-aigles" : {
-    "x" : 52,
-    "y" : 35
-  },
   "assets/joueurs/sbu-lions" : {
     "x" : 43,
     "y" : 32
   },
-  "assets/joueurs/sbu-pythons" : {
-    "x" : 51,
-    "y" : 36
-  },
-  "assets/joueurs/sbu-requins" : {
-    "x" : 51,
-    "y" : 36
-  },
   "assets/joueurs/sbu-tshirt-fight" : {
     "x" : 43,
     "y" : 32
-  },
-  "assets/joueurs/sophie-hoyas" : {
-    "x" : 54,
-    "y" : 27
-  },
-  "assets/joueurs/sophie-hoyas-aigles" : {
-    "x" : 54,
-    "y" : 27
-  },
-  "assets/joueurs/sophie-hoyas-lions" : {
-    "x" : 54,
-    "y" : 27
-  },
-  "assets/joueurs/sophie-hoyas-pythons" : {
-    "x" : 54,
-    "y" : 27
   },
   "assets/joueurs/sophie-hoyas-requins" : {
     "x" : 52,
@@ -523,37 +139,9 @@
     "x" : 52,
     "y" : 40
   },
-  "assets/joueurs/valentine" : {
-    "x" : 46,
-    "y" : 25
-  },
   "assets/joueurs/valentine-aigles" : {
     "x" : 43,
     "y" : 37
-  },
-  "assets/joueurs/valentine-lions" : {
-    "x" : 47,
-    "y" : 25
-  },
-  "assets/joueurs/valentine-pythons" : {
-    "x" : 47,
-    "y" : 25
-  },
-  "assets/joueurs/valentine-requins" : {
-    "x" : 45,
-    "y" : 26
-  },
-  "assets/joueurs/wilhem-aigles" : {
-    "x" : 43,
-    "y" : 32
-  },
-  "assets/joueurs/wilhem-lions" : {
-    "x" : 42,
-    "y" : 32
-  },
-  "assets/joueurs/wilhem-pythons" : {
-    "x" : 42,
-    "y" : 32
   },
   "assets/joueurs/wilhem-requins" : {
     "x" : 41,
@@ -562,9 +150,5 @@
   "assets/joueurs/zoe-tshirt-happy" : {
     "x" : 53,
     "y" : 36
-  },
-  "assets/joueurs/émilie-marlière" : {
-    "x" : 47,
-    "y" : 27
   }
 }

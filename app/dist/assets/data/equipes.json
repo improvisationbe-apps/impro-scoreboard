@@ -131,5 +131,30 @@
       6,
       8
     ]
+  },
+  "belgique": {
+    "nom": "Belgique",
+    "shortName": "Belgique",
+    "icone": "🇧🇪",
+    "groupe": "international",
+    "img": "assets/equipes/belgique.png",
+    "couleur": "#ef3340",
+    "couleurs": ["#fdda24", "#ef3340"],
+    "playerImgSuffix": "-tshirt-fight",
+    "playerImgFallback": "assets/equipes/belgique.png",
+    "vareuses": []
+  },
+  "quebec": {
+    "nom": "Québec",
+    "shortName": "Québec",
+    "icone": "⚜️",
+    "groupe": "international",
+    "img": "assets/equipes/quebec.png",
+    "couleur": "#2b6cd9",
+    "couleurs": ["#2b6cd9", "#ffffff", "#2b6cd9"],
+    "pointsDrapeau": true,
+    "playerImgSuffix": "-tshirt-fight",
+    "playerImgFallback": "assets/equipes/quebec.png",
+    "vareuses": []
   }
 }
