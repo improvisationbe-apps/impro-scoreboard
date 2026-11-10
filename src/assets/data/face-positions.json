@@ -103,6 +103,14 @@
     "x" : 54,
     "y" : 37
   },
+  "assets/joueurs/michael-aigles" : {
+    "x" : 52,
+    "y" : 39
+  },
+  "assets/joueurs/michael-tshirt-fight" : {
+    "x" : 45,
+    "y" : 35
+  },
   "assets/joueurs/nicolas-aigles" : {
     "x" : 52,
     "y" : 34
@@ -150,6 +158,10 @@
   "assets/joueurs/wilhem-requins" : {
     "x" : 41,
     "y" : 41
+  },
+  "assets/joueurs/zoe-aigles" : {
+    "x" : 43,
+    "y" : 37
   },
   "assets/joueurs/zoe-tshirt-happy" : {
     "x" : 53,
