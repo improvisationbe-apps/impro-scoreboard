@@ -66,7 +66,7 @@
     <p id="status" class="status"></p>
     <p id="draw-result" class="status" style="font-size:1.2rem;font-weight:800;color:var(--gold)"></p>
     <nav id="tabs" class="tabs" hidden>
-      <button class="tab active" data-tab="table">Classement</button>
+      <button class="tab active" data-tab="table">Podium</button>
       <button class="tab" data-tab="suspects" id="tab-suspects">Votes suspects</button>
     </nav>
     <div id="table"></div>
@@ -80,7 +80,7 @@
     </section>
     <p class="hint">Seuls les votes reçus dans le créneau sont comptés, prérempli de 20 h le jour du match à minuit (jour tiré de l'identifiant, ex. 2026-09-17-aigles-requins). Les deux bornes sont modifiables, sur plusieurs jours si besoin (votes du lendemain) ; une borne vide n'est pas limitée.</p>
     <p class="hint">Votes suspects : même appareil probable (signature technique du navigateur : système, écran, modèle Android…) et même 1<sup>re</sup> étoile à moins d'une minute d'intervalle. Le premier est gardé, les suivants sont écartés du classement, du tirage et de la liste d'adresses, et listés dans l'onglet « Votes suspects ». La signature n'est pas unique : des téléphones identiques la partagent, d'où l'intérêt de jeter un œil à l'onglet.</p>
-    <p class="hint">Top 8. Barème : 3 points pour une 1<sup>re</sup> étoile, 2 pour une 2<sup>e</sup>, 1 pour une 3<sup>e</sup>. Les égalités sont départagées au nombre de 1<sup>res</sup> étoiles, puis de 2<sup>es</sup>.</p>
+    <p class="hint">Podium : les trois premières places, sans points ni classement complet. Barème : 3 points pour une 1<sup>re</sup> étoile, 2 pour une 2<sup>e</sup>, 1 pour une 3<sup>e</sup>. Les égalités sont départagées au nombre de 1<sup>res</sup> étoiles, puis de 2<sup>es</sup>, puis de 3<sup>es</sup> ; les joueurs encore égaux sont ex æquo et partagent la place (ex. 1 – 1 – 2 – 3).</p>
   </main>
   <script type="module" src="resultats.js"></script>
 </body>

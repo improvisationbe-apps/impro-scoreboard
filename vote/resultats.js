@@ -5,7 +5,8 @@ import {getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChange
 import {firebaseConfig} from './firebase-config.js';
 
 const POINTS = [3, 2, 1];
-const TOP = 8;
+/** Nombre de marches du podium : rangs denses, les ex æquo partagent une marche (1, 1, 2, 3). */
+const PODIUM = 3;
 /** Votes suspects : même signature d'appareil et même 1re étoile à moins de SUSPECT_GAP_SECONDS d'intervalle. */
 const SUSPECT_GAP_SECONDS = 60;
 const app = initializeApp(firebaseConfig);
@@ -151,9 +152,15 @@ async function tally() {
       scores.set(key, s);
     });
   }
-  const rows = [...scores.values()]
-    .sort((x, y) => y.points - x.points || y.stars[0] - x.stars[0] || y.stars[1] - x.stars[1] || y.stars[2] - x.stars[2])
-    .slice(0, TOP);
+  // Tri par points, puis nombre de 1res, 2es, 3es étoiles ; seuls les joueurs égaux sur tout sont ex æquo.
+  const compare = (x, y) => y.points - x.points || y.stars[0] - x.stars[0] || y.stars[1] - x.stars[1] || y.stars[2] - x.stars[2];
+  const rows = [];
+  for (const s of [...scores.values()].sort(compare)) {
+    const prev = rows[rows.length - 1];
+    const rank = !prev ? 1 : compare(prev, s) === 0 ? prev.rank : prev.rank + 1;
+    if (rank > PODIUM) break;
+    rows.push({...s, rank});
+  }
   emails = [...new Set(ballots.map(d => d.data().email).filter(Boolean))];
   const n = ballots.length;
   countEl.textContent = `${n} vote${n > 1 ? 's' : ''} capturé${n > 1 ? 's' : ''} sur ${snap.size} reçu${snap.size > 1 ? 's' : ''}`
@@ -175,16 +182,15 @@ async function tally() {
   drawResultEl.textContent = '';
   tableEl.innerHTML = `
     <table>
-      <thead><tr><th>#</th><th>Joueur</th><th>Équipe</th><th class="num">Points</th><th class="num">1<sup>res</sup></th><th class="num">2<sup>es</sup></th><th class="num">3<sup>es</sup></th></tr></thead>
-      <tbody>${rows.map((r, i) => {
+      <thead><tr><th>#</th><th>Joueur</th><th>Équipe</th></tr></thead>
+      <tbody>${rows.map((r) => {
         const [side, code] = [r.key.slice(0, 1), r.key.slice(2)];
         const teamCode = side === 'a' ? match.teamA : match.teamB;
         const team = meta.teams[teamCode];
-        return `<tr class="${i < 3 ? 'top' : ''}">
-          <td class="rank">${i + 1}</td>
+        return `<tr class="top">
+          <td class="rank">${r.rank}</td>
           <td>${displayName(code)}</td>
           <td><span class="team-tag" style="background:${team?.couleur || '#888'}"></span>${team?.nom || teamCode || ''}</td>
-          <td class="num">${r.points}</td><td class="num">${r.stars[0]}</td><td class="num">${r.stars[1]}</td><td class="num">${r.stars[2]}</td>
         </tr>`;
       }).join('')}</tbody>
     </table>`;
