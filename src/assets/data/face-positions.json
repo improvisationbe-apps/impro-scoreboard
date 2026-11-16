@@ -3,25 +3,49 @@
     "x" : 47,
     "y" : 38
   },
+  "assets/joueurs/alain-requins-happy" : {
+    "x" : 53,
+    "y" : 37
+  },
   "assets/joueurs/alex-colusi-aigles" : {
     "x" : 46,
     "y" : 35
+  },
+  "assets/joueurs/alex-colusi-aigles-happy" : {
+    "x" : 46,
+    "y" : 37
   },
   "assets/joueurs/alexandra-ducoux-aigles" : {
     "x" : 63,
     "y" : 38
   },
+  "assets/joueurs/alexandra-ducoux-aigles-happy" : {
+    "x" : 64,
+    "y" : 37
+  },
   "assets/joueurs/alexis-lions" : {
     "x" : 51,
     "y" : 36
+  },
+  "assets/joueurs/alexis-lions-happy" : {
+    "x" : 44,
+    "y" : 37
   },
   "assets/joueurs/arnaud-aigles" : {
     "x" : 46,
     "y" : 35
   },
+  "assets/joueurs/arnaud-aigles-happy" : {
+    "x" : 51,
+    "y" : 39
+  },
   "assets/joueurs/aurore-lions" : {
     "x" : 44,
     "y" : 37
+  },
+  "assets/joueurs/aurore-lions-happy" : {
+    "x" : 46,
+    "y" : 36
   },
   "assets/joueurs/aurore-tshirt-fight" : {
     "x" : 45,
@@ -39,6 +63,10 @@
     "x" : 53,
     "y" : 37
   },
+  "assets/joueurs/cath-aigles-happy" : {
+    "x" : 57,
+    "y" : 36
+  },
   "assets/joueurs/cath-tshirt-fight" : {
     "x" : 54,
     "y" : 36
@@ -47,9 +75,17 @@
     "x" : 48,
     "y" : 35
   },
+  "assets/joueurs/charlotte-otlet-lions-happy" : {
+    "x" : 41,
+    "y" : 34
+  },
   "assets/joueurs/clem-lions" : {
     "x" : 52,
     "y" : 40
+  },
+  "assets/joueurs/clem-lions-happy" : {
+    "x" : 53,
+    "y" : 34
   },
   "assets/joueurs/clem-tshirt-happy" : {
     "x" : 51,
@@ -58,6 +94,10 @@
   "assets/joueurs/david-di-gloria-aigles" : {
     "x" : 56,
     "y" : 39
+  },
+  "assets/joueurs/david-di-gloria-aigles-happy" : {
+    "x" : 57,
+    "y" : 33
   },
   "assets/joueurs/david-di-gloria-tshirt-fight" : {
     "x" : 48,
@@ -71,9 +111,17 @@
     "x" : 45,
     "y" : 35
   },
+  "assets/joueurs/elodie-lions-happy" : {
+    "x" : 51,
+    "y" : 34
+  },
   "assets/joueurs/emilie-marliere-requins" : {
     "x" : 52,
     "y" : 36
+  },
+  "assets/joueurs/emilie-marliere-requins-happy" : {
+    "x" : 52,
+    "y" : 33
   },
   "assets/joueurs/emilie-marliere-tshirt-happy" : {
     "x" : 52,
@@ -87,6 +135,10 @@
     "x" : 51,
     "y" : 40
   },
+  "assets/joueurs/gab-de-pat-requins-happy" : {
+    "x" : 56,
+    "y" : 34
+  },
   "assets/joueurs/gab-de-pat-tshirt-fight" : {
     "x" : 44,
     "y" : 37
@@ -99,6 +151,10 @@
     "x" : 43,
     "y" : 37
   },
+  "assets/joueurs/lenny-b-conil-lions-happy" : {
+    "x" : 42,
+    "y" : 36
+  },
   "assets/joueurs/lenny-b-conil-tshirt-happy" : {
     "x" : 50,
     "y" : 38
@@ -110,6 +166,10 @@
   "assets/joueurs/michael-aigles" : {
     "x" : 52,
     "y" : 39
+  },
+  "assets/joueurs/michael-aigles-happy" : {
+    "x" : 41,
+    "y" : 34
   },
   "assets/joueurs/michael-tshirt-happy" : {
     "x" : 45,
@@ -127,9 +187,21 @@
     "x" : 52,
     "y" : 34
   },
+  "assets/joueurs/nicolas-aigles-happy" : {
+    "x" : 52,
+    "y" : 34
+  },
   "assets/joueurs/pec-aigles" : {
     "x" : 51,
     "y" : 40
+  },
+  "assets/joueurs/pec-aigles-happy" : {
+    "x" : 53,
+    "y" : 37
+  },
+  "assets/joueurs/philippe-verbeke-requins-happy" : {
+    "x" : 41,
+    "y" : 36
   },
   "assets/joueurs/philippe-verbeke-tshirt-fight" : {
     "x" : 53,
@@ -139,17 +211,33 @@
     "x" : 47,
     "y" : 37
   },
+  "assets/joueurs/polo-lions-happy" : {
+    "x" : 52,
+    "y" : 35
+  },
   "assets/joueurs/q-requins" : {
     "x" : 50,
     "y" : 35
+  },
+  "assets/joueurs/q-requins-happy" : {
+    "x" : 57,
+    "y" : 38
   },
   "assets/joueurs/romain-kh-requins" : {
     "x" : 48,
     "y" : 38
   },
+  "assets/joueurs/romain-kh-requins-happy" : {
+    "x" : 52,
+    "y" : 34
+  },
   "assets/joueurs/sbu-lions" : {
     "x" : 43,
-    "y" : 32
+    "y" : 31
+  },
+  "assets/joueurs/sbu-lions-happy" : {
+    "x" : 43,
+    "y" : 31
   },
   "assets/joueurs/sbu-tshirt-fight" : {
     "x" : 43,
@@ -158,6 +246,10 @@
   "assets/joueurs/sophie-hoyas-requins" : {
     "x" : 52,
     "y" : 37
+  },
+  "assets/joueurs/sophie-hoyas-requins-happy" : {
+    "x" : 51,
+    "y" : 36
   },
   "assets/joueurs/sophie-hoyas-tshirt-happy" : {
     "x" : 52,
@@ -171,13 +263,25 @@
     "x" : 43,
     "y" : 37
   },
+  "assets/joueurs/valentine-aigles-happy" : {
+    "x" : 55,
+    "y" : 38
+  },
   "assets/joueurs/wilhem-requins" : {
+    "x" : 41,
+    "y" : 41
+  },
+  "assets/joueurs/wilhem-requins-happy" : {
     "x" : 41,
     "y" : 41
   },
   "assets/joueurs/zoe-aigles" : {
     "x" : 43,
     "y" : 37
+  },
+  "assets/joueurs/zoe-aigles-happy" : {
+    "x" : 51,
+    "y" : 35
   },
   "assets/joueurs/zoe-tshirt-happy" : {
     "x" : 53,
