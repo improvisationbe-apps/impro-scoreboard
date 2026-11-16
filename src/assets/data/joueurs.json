@@ -159,5 +159,9 @@
   {
     "prenom": "Michael",
     "img": "assets/joueurs/michael"
+  },
+  {
+    "prenom": "Thomas",
+    "img": "assets/joueurs/thomas"
   }
 ]

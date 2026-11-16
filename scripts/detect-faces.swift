@@ -1,4 +1,4 @@
-// Analyse des photos de joueurs (src/assets/joueurs) avec le framework Vision de macOS.
+// Analyse des photos de joueurs (src/assets/joueurs/<joueur>/) avec le framework Vision de macOS.
 // Écrit src/assets/data/face-positions.json :
 //
 //   "assets/joueurs/polo-lions": { "x": 46, "y": 37 }
@@ -21,7 +21,11 @@ struct Face: Encodable {
     var y: Int
 }
 
-let files = try FileManager.default.contentsOfDirectory(at: photosDir, includingPropertiesForKeys: nil)
+// Un dossier par joueur : on parcourt les sous-dossiers ; la clé reste "assets/joueurs/<nom sans extension>".
+let fm = FileManager.default
+let files = try fm.contentsOfDirectory(at: photosDir, includingPropertiesForKeys: [.isDirectoryKey])
+    .filter { (try? $0.resourceValues(forKeys: [.isDirectoryKey]).isDirectory) == true }
+    .flatMap { (try? fm.contentsOfDirectory(at: $0, includingPropertiesForKeys: nil)) ?? [] }
     .filter { imageExtensions.contains($0.pathExtension.lowercased()) }
     .sorted { $0.lastPathComponent < $1.lastPathComponent }
 

@@ -16,10 +16,12 @@
       <li class="nav-item">
         <a class="nav-link" routerLink="match" routerLinkActive="active">Match</a>
       </li>
-      <!-- Onglet Reseaux masqué (route toujours accessible via /reseaux) -->
-      <!--<li class="nav-item">
-        <a class="nav-link" routerLink="reseaux" routerLinkActive="active">Reseaux</a>
-      </li>-->
+      <!-- Réseaux sociaux : seulement en mode debug (npm run start) ; la route /reseaux reste accessible -->
+      @if (debug) {
+        <li class="nav-item">
+          <a class="nav-link" routerLink="reseaux" routerLinkActive="active">Réseaux sociaux</a>
+        </li>
+      }
     </ul>
   </div>
 </nav>

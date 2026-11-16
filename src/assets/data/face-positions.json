@@ -115,6 +115,14 @@
     "x" : 45,
     "y" : 35
   },
+  "assets/joueurs/mp-aigles" : {
+    "x" : 49,
+    "y" : 38
+  },
+  "assets/joueurs/mp-aigles-happy" : {
+    "x" : 49,
+    "y" : 38
+  },
   "assets/joueurs/nicolas-aigles" : {
     "x" : 52,
     "y" : 34
@@ -154,6 +162,10 @@
   "assets/joueurs/sophie-hoyas-tshirt-happy" : {
     "x" : 52,
     "y" : 40
+  },
+  "assets/joueurs/thomas-requins-happy" : {
+    "x" : 53,
+    "y" : 36
   },
   "assets/joueurs/valentine-aigles" : {
     "x" : 43,

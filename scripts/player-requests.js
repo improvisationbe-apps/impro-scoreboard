@@ -80,16 +80,21 @@ async function readPhoto(ref, photo) {
   return Buffer.concat(parts.map(p => Buffer.from(p.get('data'))));
 }
 
-/** Écrit la photo et renvoie la file de détourage mise à jour. */
+/**
+ * Écrit la photo dans le dossier du joueur (src/assets/joueurs/<stem>/) et renvoie la file de détourage mise à jour
+ * (entrées <stem>/<fichier>, relatives à src/assets/joueurs).
+ */
 function writePhoto(stem, photo, content, queue) {
-  const name = `${stem}${photo.suffix}.${photo.ext}`;
+  const dir = path.join(PHOTOS_DIR, stem);
+  fs.mkdirSync(dir, {recursive: true});
+  const name = `${stem}/${stem}${photo.suffix}.${photo.ext}`;
   // Les autres formats de la même photo sont supprimés, sinon le manifeste garderait l'ancien PNG.
   for (const ext of EXTENSIONS) {
-    const other = path.join(PHOTOS_DIR, `${stem}${photo.suffix}.${ext}`);
+    const other = path.join(dir, `${stem}${photo.suffix}.${ext}`);
     if (ext !== photo.ext && fs.existsSync(other)) fs.unlinkSync(other);
   }
   fs.writeFileSync(path.join(PHOTOS_DIR, name), content);
-  const kept = queue.filter(n => n.slice(0, n.lastIndexOf('.')) !== stem + photo.suffix);
+  const kept = queue.filter(n => n.slice(0, n.lastIndexOf('.')) !== `${stem}/${stem}${photo.suffix}`);
   if (photo.cutout) kept.push(name);
   return kept;
 }

@@ -2,7 +2,7 @@ import Foundation
 import CoreImage
 import Vision
 
-// Détourage d'une photo de joueur : npm run photos:cutout -- src/assets/joueurs/<nom>.jpg
+// Détourage d'une photo de joueur : npm run photos:cutout -- src/assets/joueurs/<joueur>/<nom>.jpg
 // Écrit <nom>.png à côté (le manifeste photos.json préfère ensuite le PNG). Options : [t0 t1 bande érosion debugFond.png]
 // Les réglages par défaut dépendent du fond (noir ou clair). Cheveux très clairs sur fond noir : essayer 0.20 1.2 40 25.
 // Détourage Vision affiné autour de la tête : le fond (uni ou dégradé) est estimé localement en

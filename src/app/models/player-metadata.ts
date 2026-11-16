@@ -80,6 +80,18 @@ export class PlayerMetadata {
     return stem ? this._photos[stem] : undefined;
   }
 
+  /**
+   * Photos du joueur dont le suffixe correspond au motif (ex. /^-[a-z]+-happy$/ : "-tshirt-happy", "-aigles-happy"),
+   * avec leur nom sans extension et leur chemin.
+   */
+  photosMatching(suffixPattern: RegExp): {stem: string; suffix: string; src: string}[] {
+    if (!this._dto.img) return [];
+    const base = this._dto.img.substring(this._dto.img.lastIndexOf('/') + 1);
+    return Object.entries(this._photos)
+      .filter(([stem]) => stem.startsWith(base + '-') && suffixPattern.test(stem.slice(base.length)))
+      .map(([stem, src]) => ({stem, suffix: stem.slice(base.length), src}));
+  }
+
   /** Vidéo du joueur : même chemin que l'image de base, avec l'extension .mp4. */
   get videoSrc(): string | undefined {
     return this._dto.img ? `${this._dto.img}.mp4` : undefined;

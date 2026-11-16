@@ -52,7 +52,7 @@ const code = (p) => (p.prenom || '') + (p.nom || '');
 const stem = (p) => p.img ? p.img.substring(p.img.lastIndexOf('/') + 1) : '';
 const PHOTOS_SRC = path.join(ROOT, 'src', 'assets', 'joueurs');
 /** Vrai si le joueur a une photo détourée (PNG) aux couleurs de l'équipe dans les sources. */
-const hasCutout = (p, teamCode) => fs.existsSync(path.join(PHOTOS_SRC, `${stem(p)}-${teamCode}.png`));
+const hasCutout = (p, teamCode) => fs.existsSync(path.join(PHOTOS_SRC, stem(p), `${stem(p)}-${teamCode}.png`));
 
 /** Compositions d'exemple par équipe (codes joueur = prénom + nom, comme dans joueurs.json). */
 const SAMPLE_TEAMS = {

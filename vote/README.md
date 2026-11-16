@@ -37,7 +37,7 @@ ligue : une seule photo, enregistrée en `-tshirt-fight` (suffixe des équipes i
 
 « Enregistrer » dépose une demande dans Firestore (`playerRequests`, photos découpées en morceaux de 900 Ko). Le
 workflow `.github/workflows/joueurs.yml` passe toutes les 5 minutes : `scripts/player-requests.js` applique les
-demandes (joueurs.json, photos, `scripts/cutout-queue.json`), puis détourage, cadrage des visages, manifeste, commit
+demandes (joueurs.json, photos rangées dans `src/assets/joueurs/<joueur>/`, `scripts/cutout-queue.json`), puis détourage, cadrage des visages, manifeste, commit
 sur `main`, suppression des demandes et redéploiement du vote. Une demande invalide reste affichée sur la page avec
 le motif du refus.
 

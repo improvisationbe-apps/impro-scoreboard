@@ -49,7 +49,12 @@ if (!magick && !sips) {
 
 // Une photo par nom, en préférant les formats avec transparence (même règle que photos-manifest.js).
 const sources = {};
-for (const file of fs.readdirSync(PHOTOS_DIR).sort()) {
+// Un dossier par joueur : file = <joueur>/<fichier>
+const photoFiles = fs.readdirSync(PHOTOS_DIR, {withFileTypes: true})
+  .filter(d => d.isDirectory())
+  .flatMap(d => fs.readdirSync(path.join(PHOTOS_DIR, d.name)).map(f => `${d.name}/${f}`))
+  .sort((a, b) => path.basename(a).localeCompare(path.basename(b)));
+for (const file of photoFiles) {
   const ext = path.extname(file).slice(1).toLowerCase();
   if (!EXTENSIONS.includes(ext)) continue;
   const stem = path.basename(file, path.extname(file));
